@@ -108,3 +108,13 @@ User is supplied with a notenook which has a variety of uses throughout the game
 - When the user wins the game they will be prompted with a congradualtions and a small section of text
 
 - They will also be asked if they would like to play the game again or not and are given the option
+
+### Losing the games
+
+- If the user loses the game thet will be displayed with a Losing text and better luck next time! They will also be told what the actual nature of the ghost was.
+
+- The user will be asked if they would like to play again or not too!
+
+### Restart the game
+
+- The user will be given the option to play the game again or exit the game completely after winning or losing the game. This will save the user from having to exit the website entirely
