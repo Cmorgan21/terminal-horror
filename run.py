@@ -358,16 +358,47 @@ def interact_with_notebook():
         print("6. Escape from this action (Type 'B')")
 
         if choice == "Write":
-
+            write_notes(notes_worksheet)
+            continue
         elif choice == "View":
-
+            view_notes(notes_worksheet)
+            continue
         elif choice == "B":
-
+            clear()
+            t_print("You put your notebook away.")
             break
         elif choice == "Hints":
-
+            clear()
+            print("Hints from Diablo:\n")
+            print(
+                "Here are more in-depth descriptions to give you an idea of the traits the ghosts have:\n")
+            print("1. Freezing Temperatures:")
+            print("   - This isn't your typical cold room or chilly setting; it's a more sinister, bone-chilling cold.")
+            print(
+                "   - You'll feel an intense cold that cuts to the bone, making you shiver and see your breath.")
+            print("   - Objects may frost over, and windows may become icy.")
+            print("\n2. Ghost Writing:")
+            print(
+                "   - This trait involves anything that appears to have been written or inscribed.")
+            print(
+                "   - Look for mysterious writings or symbols on walls, objects, or even in your own notebook.")
+            print("   - These messages might seem to be written by an unseen hand.")
+            print("\n3. Ghost Orb:")
+            print("   - Ghost orbs are floating white orbs of light that can be seen in reflections, mirrors, or photographs.")
+            print(
+                "   - These orbs are not physical objects but rather manifestations of ghostly energy.")
+            print("   - They often move in an unusual and non-linear pattern.")
+            print("\n4. Shadows:")
+            print("   - Shadow activity can manifest as dark, shadowy figures or silhouettes moving in the corners of your vision.")
+            print("   - Sudden and unexplained movements or disturbances in the shadows may be a sign of this trait.")
+            print("\n5. Spirit Box:")
+            print("   - This trait involves communication with the other side.")
+            print("   - You may hear unexplained voices, whispers, or responses to your questions through a spirit box or radio.")
+            print("   - The voices you hear may have an otherworldly quality.")
+            print("\n6. EMF Levels:")
+            print("   - High levels of electromagnetic interference (EMF) are often associated with ghostly activity.")
+            print("   - Electronic devices like TVs or lights may behave erratically, flicker, or malfunction when a ghost is nearby.")
         elif choice == "Traits":
-
         elif choice == "Guess":
 
             if user_guess != ghost:
