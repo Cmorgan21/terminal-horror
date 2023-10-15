@@ -39,3 +39,15 @@ Terminal Horror is a Python Terminal Horror Adventure game. This game is all abo
 - A backstory will be given to support user experience. This is all done with a type writing affect to create ambience
 
 - The user will be prompted again if they are ready to take on the challenge - giving the user opportunity to engage with the game
+
+### Haunted House ASCII
+
+-[Haunted House ASCII]()
+
+- The user will be displayed with a visual house created from ASCII to help with the user experince
+
+### Entering the House
+
+- Entering the house you are given a visual description of where you are as the user
+
+- You are given the option where you would like to explore
