@@ -132,3 +132,7 @@ def generate_ghost():
     """
     ghost_worksheet = SHEET.worksheet('Ghosts')
     game_tracker_worksheet = SHEET.worksheet('Game Tracker')
+    ghost_names = ghost_worksheet.col_values(1)[1:]
+    random_ghost = random.choice(ghost_names)
+    generate_clues(random_ghost)
+    game_tracker_worksheet.update_acell('B2', random_ghost)
