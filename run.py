@@ -399,6 +399,22 @@ def interact_with_notebook():
             print("   - High levels of electromagnetic interference (EMF) are often associated with ghostly activity.")
             print("   - Electronic devices like TVs or lights may behave erratically, flicker, or malfunction when a ghost is nearby.")
         elif choice == "Traits":
+            clear()
+            ghost_worksheet = SHEET.worksheet('Ghosts')
+            ghost_names = ghost_worksheet.col_values(
+                1)[1:]  # Skip the header row
+            # Get descriptions from column B, skip the header row
+            ghost_descriptions = ghost_worksheet.col_values(2)[1:]
+            for ghost_name, ghost_description in zip(ghost_names, ghost_descriptions):
+                t_print(ghost_name)
+                t_print(ghost_description)
+                t_print(f"Traits of {ghost_name}:")
+                # Adjust for 0-based index and header row
+                row_number = ghost_names.index(ghost_name) + 2
+                # Get traits from columns C, D, E
+                traits = ghost_worksheet.row_values(row_number)[2:5]
+                for index, trait in enumerate(traits, start=1):
+                    t_print(f"{index}. {trait}")
         elif choice == "Guess":
 
             if user_guess != ghost:
