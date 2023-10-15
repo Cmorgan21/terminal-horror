@@ -190,3 +190,13 @@ User is supplied with a notenook which has a variety of uses throughout the game
   | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
   | Complete Code and Error handling | Finish all code and ensure a smooth application with no erros from pylint. Ensuring all error handling form user inputs and extracting and updating data from spreadsheets is handled clear, consise and gracefully |
   | Complete Readme.md               | Do readme.md of completed project and provide visual exmaples of code and game                                                                                                                                      |
+
+### The Structure Plane
+
+- Termianl Horror is a termianl based horror adventure game. Allowing users to use their problem solving skills to figure out the entity's nature.
+
+- The user navigates through the house by typing the room they want to enter, inspecting the items they want to check.
+
+- The user can backout of each section with a clear concise instruction of pressing 'B'
+
+- The user can also take out their notebook at any point of the game too using the instruction of 'N'
