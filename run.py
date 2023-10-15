@@ -471,3 +471,16 @@ def restart_game():
     """
     Function executes when the game has finsihed to give the user option to play again
     """
+    while True:
+        t_print("Thank you for playing Terminal Horror!")
+        play_again = input("Play again? (Y/N): ").strip().upper()
+
+        if play_again == "Y":
+            clear()
+            introduction()
+            break  # Exit the loop to avoid repeating the question
+        elif play_again == "N":
+            t_print("No Problem. Goodbye!")
+            break  # Exit the loop
+        else:
+            print("Invalid choice. Please enter 'Y' or 'N'.")
