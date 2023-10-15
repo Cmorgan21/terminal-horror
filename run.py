@@ -334,3 +334,12 @@ def rooms():
             clear()
             print("Invalid room name. Please try again.\n")
             continue
+
+
+def interact_with_notebook():
+    """
+    Allows the player to interact with their notebook, write notes, view notes, check ghost traits, make guesses, or access hints.
+    """
+    clear()
+    guess_left = 2  # Initialize guess_left here
+    t_print("You take out your notebook")
