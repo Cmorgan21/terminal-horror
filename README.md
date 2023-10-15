@@ -65,3 +65,13 @@ Terminal Horror is a Python Terminal Horror Adventure game. This game is all abo
 - The user will be given a prompt on how to acess these rooms
 
 - ![Rooms Display]()
+
+### NoteBook
+
+User is supplied with a notenook which has a variety of uses throughout the game
+
+- #### Hints
+
+  - The user can access hints to support them within the game. Specifically what to look for in terms of decriptions when they are checking the ghosts traits
+
+  - This will give the user a better idea of what they are actual
