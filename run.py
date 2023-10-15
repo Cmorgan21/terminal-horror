@@ -547,6 +547,13 @@ def handle_guess(guess_left):
     """
     Handles the player's guess for the ghost and returns the user's choice.
     """
+    clear()
+    t_print(f"Take your guess! You have {guess_left} guesses left!")
+    t_print("1. Banshee (Type 'Banshee')")
+    t_print("2. Jinn (Type 'Jinn')")
+    t_print("3. Wraith (Type 'Wraith')")
+    t_print("4. Shade (Type 'Shade')")
+    t_print("5. Demon (Type 'Demon')")
 
 
 def revert_original_sheet():
