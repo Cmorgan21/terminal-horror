@@ -134,3 +134,59 @@ User is supplied with a notenook which has a variety of uses throughout the game
 - #### Strategy of Game
 
   - The strategy of the game is to challenge the user and their problem solving skills to crack which entity they are dealing with. Allow the user to think and read between the lines as they uncover the mystery within the horror house. Meanwhile dealing with an earrie ambiance as they play.
+
+### The Scope Plane
+
+- #### Project Aim
+
+  - Create a game that is fun and interactive for users that play
+
+  - A game that creates an unsettling spooky feeling as you play
+
+  - Gives the user a vivid image of the game that they are playing through descriptions
+
+  - Gives the user a challenge to use their problem solving skills
+
+  - Gives user clear feeback and clear instructions whatever they decide to do within the game
+
+- #### Features
+
+  - When the users initiates the game - they will be given an introduction to the game told what they have to do and what to expect. The user is given the option to play the game or not
+
+  - After the user decides to join the game - they will be introducted to an in-game personaility 'Diablo'. Who will paint the user a story and an environment to better help the user visualise the game they are playing.
+
+  - Rooms are available to investigate when they have started the adventure. They are given 5 rooms to investigate from which all include their own individual items which have their individual descriptions
+
+  - When the ghost has been generated - Some of the items descriptions will be modified within the googlesheets. These are different for each ghost and these hints indicate towards the traits of that individual ghost
+
+  - The notebook is another feature which is displayed when the rooms are displayed. The notebook is also displayed whe the user is investigating a room. This allows the user to write notes and view them. Other features are as follows:
+
+    - A feature included withint the notebook is ghost traits. This allows the user to see all the traits of each ghost that it could potentially be. This allows them to refer back to it and narrow down which ghost it could be depending on the clues they have picked up
+
+    - Another feature that is in the notebook is Guessing the Ghost. This allows the user to take their guess of which ghost they think it is. They are informed they only have two guesses
+
+    - Hints is another feature that is included within the notebook. This can support a user in breaking down the descriptions of the items that they are looking at. Such as reading between the lines and understanding what the traits mean.
+
+- #### Timing and Scalability
+
+  - This code was disected into short sprints due to limited time.
+
+  | Sprint 1             | Description                                                                                                                                                          |
+  | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Create Logic Diagram | Creating a logic diagram allowed me to break down the code into smaller sections and made the final objective much more comprehendable                               |
+  | Create Mind Map      | Creating a mind map gave me a better idea on all the contents that I wanted to incorperate within the project and assess what could be used within the the timeframe |
+
+  | Sprint 2                    | Description                                                                                                       |
+  | --------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+  | Initiate Python Application | Initaite the Python Terminal Files and ensure everything is all files are there using the Code Institute Template |
+  | Create all functions needed | Implement all functions within the run.py that was broke down using a logic diagram in sprint 1                   |
+
+  | Sprint 3                             | Description                                                                                                                                        |
+  | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Initial Commit and Link Spreadsheets | Link the spreadsheets and create all worksheets needed for game. Also commit my first commit to github ready for version control                   |
+  | Create content for spreadsheets      | Complete content for spreadsheets to efficiently extract and update data within the python programme and navigate to creating a smooth application |
+
+  | Sprint 4                         | Description                                                                                                                                                                                                         |
+  | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Complete Code and Error handling | Finish all code and ensure a smooth application with no erros from pylint. Ensuring all error handling form user inputs and extracting and updating data from spreadsheets is handled clear, consise and gracefully |
+  | Complete Readme.md               | Do readme.md of completed project and provide visual exmaples of code and game                                                                                                                                      |
