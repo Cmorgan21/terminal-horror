@@ -543,6 +543,12 @@ def view_notes(notes_worksheet):
         t_print("You haven't written any notes yet.")
 
 
+def handle_guess(guess_left):
+    """
+    Handles the player's guess for the ghost and returns the user's choice.
+    """
+
+
 def revert_original_sheet():
     """
     Reverts the original worksheet data back to a backup in case the player ends the game.
