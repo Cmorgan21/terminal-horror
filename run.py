@@ -299,7 +299,7 @@ def start_game(name):
             print("Invalid input. Please enter 'Y' or 'N', not a number.")
             continue
         else:
-            # If uer doesn;t input any of the above it will execute this code
+            # If uer doesn't input any of the above it will execute this code
             print("Invalid input. Please enter 'Y' or 'N'.")
             continue
 
@@ -310,6 +310,7 @@ def enter_house():
     """
     room_worksheet = SHEET.worksheet('Rooms')
     hallway_description = room_worksheet.cell(5, 2).value
+    # Gets cell value from room worksheet
 
     t_print("You entered the house...\n")
     t_print("You walk into the hallway\n")
@@ -327,6 +328,7 @@ def rooms():
         print("Rooms to investigate:\n")
         room_worksheet = SHEET.worksheet('Rooms')
         room_names = room_worksheet.col_values(1)[1:]
+        # Gathers room names in column except first row
         for room in room_names:
             print(f"{room} (Type '{room}')\n")
         print("")
@@ -351,6 +353,7 @@ def rooms():
             room_index = room_names.index(user_room)
             room_item_descriptions = room_worksheet.row_values(
                 2 + 1 * room_index)
+            # Displayes the cell values of each row looped through
             investigate_room(user_room, room_item_descriptions)
         elif user_room == "":
             print("Invalid choice. Please enter a response.")
@@ -641,6 +644,7 @@ def main():
     try:
         introduction()
     except ConnectionRefusedError as e:
+        # error handling is introduction couldn't be executed
         print(f"An unexpected error occurred: {e}")
 
 
