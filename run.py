@@ -504,10 +504,11 @@ def interact_with_notebook():
 
     while True:
         notes_worksheet = SHEET.worksheet('Notebook')
-        choice = input("What would you like to do?: ").strip().capitalize()
         game_tracker_worksheet = SHEET.worksheet('Game Tracker')
         game_tracker_row = game_tracker_worksheet.row_values(2)
         ghost = game_tracker_row[1]
+
+        choice = input("What would you like to do?: ").strip().capitalize()
 
         print("1. Write notes (Type 'Write')")
         print("2. View notes (Type 'View')")
