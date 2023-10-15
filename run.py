@@ -143,3 +143,42 @@ def generate_clues(ghost):
     Generates clues for the ghost and updates Google Sheets with descriptions of items in cells for the generated ghost.
     """
     room_worksheet = SHEET.worksheet('Rooms')
+    cell_list = []
+
+    # Define a dictionary with ghost names as keys and a list of cell data as values
+    ghost_clues = {
+        "Banshee": [
+            {"row": 2, "column": 6, "description": "The mirror is rusted with an old-fashioned like pattern. The cobwebs and dust hug the mirror. Visisble finger prints as if someone's trying to escape"},
+            {"row": 4, "column": 4,
+                "description": "The rusted microwave covered with nothing but old food. In the reflection a faint ball of light almost as if its an orb floats in the background"},
+            {"row": 6, "column": 8, "description": "The small flickers of the old lamp reflect on the wall as a faint shadow darts across the wall"}
+        ],
+        "Demon": [
+            {"row": 3, "column": 6, "description": "an old, weathered cot nestled in the corner. The wooden frame creaks as you approach it faint, ethereal writing etched into the timeworn wood. The letters appear to have been inscribed by an unseen hand"},
+            {"row": 4, "column": 8, "description": "a solitary window, its glass frosted over with an icy veneer. As you draw near, an unmistakable coldness envelops you, seeping from the glass pane. The frost patterns etched upon the window"},
+            {"row": 5, "column": 4,
+                "description": "a series of broken and splintered wooden boards. These boards are not just broken; they bear the unmistakable mark of something unusual. Faint claw marks, almost translucent in appearance, are imprinted upon the shattered wood"}
+        ],
+        "Jinn": [
+            {"row": 2, "column": 4, "description": "The curtains, once opulent and regal, now hang in tatters, their deep crimson color faded and frayed. But what truly captures your attention is the unusual phenomenon occurring around them—freezing temperatures that seem to emanate from the very fabric."},
+            {"row": 3, "column": 8, "description": "A relic of a bygone era, emits a low, intermittent static that fills the room with a chilling sense of foreboding. As you approach the screen begins to flicker ferociously"},
+            {"row": 6, "column": 4,
+                "description": "The lampshade is tattered and frayed. What truly catches your eye, however, are the eerie and unexplainable white smudged hand print all over it"}
+        ],
+        "Shade": [
+            {"row": 2, "column": 8,
+                "description": "A beautiful yet eerie painting adorns one of the walls. The room exudes an unsettling ambiance, with the air growing noticeably colder. The light begins to flicker as if it's possesed"},
+            {"row": 3, "column": 4,
+                "description": "Shrouded in an inexplicable coldness, and the temperature drops to freezing levels. The chilling atmosphere seems to intensify around the rocking chair, leaving you with an eerie sensation that something spectral is lurking nearby..."},
+            {"row": 5, "column": 8,
+                "description": "You notice strange writing etched onto the clock's face, seemingly appearing out of nowhere. The cryptic messages and symbols suggest a haunting presence, and the ghostly aura in the hallway grows stronger"}
+        ],
+        "Wraith": [
+            {"row": 3, "column": 8,
+                "description": "The beaten up baby monitor with a shallow light eminating from it as you approach you hear something come from it...\n I.. I'm comin\n coming for YOU!"},
+            {"row": 5, "column": 6,
+                "description": "In the midst the dim light, you catch a glimpse of an elusive, shadowy tall figure darting across the corridor."},
+            {"row": 6, "column": 6,
+                "description": "As you approach the TV, you notice an unsettling presence, its lights flickering and beeping erratically. It's as though the spirits of the past are trying to communicate through this old, haunted television."}
+        ],
+    }
