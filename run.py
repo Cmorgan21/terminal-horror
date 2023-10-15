@@ -194,3 +194,32 @@ def generate_clues(ghost):
         room_worksheet.update_cells(cell_list)
     else:
         print(f"No clues defined for the ghost: {ghost}")
+
+
+def start_game(name):
+    """
+    Starts the game and provides the player with information and objectives.
+    """
+    t_print(f"You must be {name}.")
+    t_print("I'm Diablo, a paranormal investigator with a lifelong fascination for the unknown.")
+    sleep(2)
+    t_print("I've spent years studying the mysteries of the terminal horror mansion, but it's never been more sinister than now.")
+    t_print("The mansion has been abandoned for centuries, and the legends surrounding it have only grown darker.")
+    t_print("What's worse... Since it gained notoriety, we've had a group of teenagers disappear after venturing inside.")
+    t_print("This is where you come in.")
+    t_print("Your mission is to uncover the truth behind the haunting and bring closure to those lost souls.")
+    t_print("Descriptions of items within rooms, shall give you hints towards a specific ghost trait. You need to look for these items")
+    t_print(
+        "I've provided you with a notebook, a tool I've used on countless investigations.")
+    t_print("In this book, you'll find.")
+    print("")
+    t_print("Entities Traits. Chech this first so you know what to expect.")
+    print("")
+    t_print("Ability to write and view your own notes")
+    print("")
+    t_print("Hints if you need help.")
+    t_print("Remember, when you're sure of the entity you're dealing with, make your guess in the notebook's 'Guess' section.")
+    t_print("But you have only two chances, so choose wisely.")
+    sleep(5)
+    clear()
+    sleep(2)
