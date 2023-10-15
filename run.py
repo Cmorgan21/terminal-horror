@@ -281,17 +281,21 @@ def start_game(name):
             continue
 
 
-def main():
+def investigate_room(room_name, room_item_descriptions):
     """
-    The main function that initiates and controls the game's flow.
+    Allows the player to investigate a room and its items.
     """
-    try:
-        introduction()
-    except ConnectionRefusedError as e:
-        print(f"An unexpected error occurred: {e}")
+    clear()
+    t_print(f"You have entered the {room_name}\n")
+    room_description = room_item_descriptions[1]
+    items = room_item_descriptions[2:]
 
+    t_print(room_description + "\n")
+    t_print("What items would you like to investigate?\n")
 
-main()
+    for i in range(0, len(items), 2):
+        item_name = items[i]
+        t_print(f"{item_name} (Type '{item_name}')\n")
 
 
 def enter_house():
