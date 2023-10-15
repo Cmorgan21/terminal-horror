@@ -480,6 +480,18 @@ def interact_with_notebook():
                 "Invalid input. Please choose one of the available options (Write, View, B, Hints, Traits, Guess).")
 
 
+def end_game(ghost, user_guess):
+    """
+    Ends the game and informs the player of the result when they run out of guesses.
+    """
+
+
+def win_game(ghost):
+    """
+    Displays a victory message when the player correctly identifies the ghost.
+    """
+
+
 def revert_original_sheet():
     """
     Reverts the original worksheet data back to a backup in case the player ends the game.
