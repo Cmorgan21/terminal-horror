@@ -132,6 +132,7 @@ def generate_ghost():
     """
     ghost_worksheet = SHEET.worksheet('Ghosts')
     game_tracker_worksheet = SHEET.worksheet('Game Tracker')
+
     ghost_names = ghost_worksheet.col_values(1)[1:]
     random_ghost = random.choice(ghost_names)
     generate_clues(random_ghost)
@@ -208,7 +209,7 @@ def start_game(name):
     t_print("What's worse... Since it gained notoriety, we've had a group of teenagers disappear after venturing inside.")
     t_print("This is where you come in.")
     t_print("Your mission is to uncover the truth behind the haunting and bring closure to those lost souls.")
-    t_print("Descriptions of items within rooms, shall give you hints towards a specific ghost trait. You need to look for these items")
+    t_print("Using the descriptions of items within rooms, discover if any of these descriptions hint towards traits of an entity")
     t_print(
         "I've provided you with a notebook, a tool I've used on countless investigations.")
     t_print("In this book, you'll find.")
@@ -228,39 +229,39 @@ def start_game(name):
         user_ready = input(f"So {name} are you ready?(Y/N): ")
         if user_ready.upper() == "Y":
             haunted_house = """
-                                            .     .
-                                            !!!!!!!
-                                    .       [[[|]]]    .
-                                    !!!!!!!!|--_--|!!!!!
-                                    [[[[[[[[\\_(X)_/]]]]]
-                            .-.     /-_--__-/_--_-\\-_--\\
-                            |=|    /-_---__/__-__-_\\__-_\\
-                        . . |=| ._/-__-__\\===========/-__\\_
-                        !!!!!!!!!\\========[ /]]|[[\\ ]=====/
-                        /-_--_-_-_[[[[[[[[[||==  == ||]]]]]]
-                        /-_--_--_--_|=  === ||=/^|^\\ ||== =|
-                        /-_-/^|^\\-_--| /^|^\\=|| | | | ||^\\= |
-                    /_-_-| | |-_--|=| | | ||=|_|_|=||"|==|
-                    /-__--|_|_|_-_-| |_|_|=||______=||_| =|
-                    /_-__--_-__-___-|_=__=_.`---------'._=_|__
-                    /-----------------------\\===========/-----/
-                ^^^\\^^^^^^^^^^^^^^^^^^^^^^[[|]]|[[|]]=====/
-                    |.' ..==::'"'::==.. '.[ /~~~~~\\ ]]]]]]]
-                    | .'=[[[|]]|[[|]]]=`._||==  =  || =\\ ]
-                    ||== =|/ _____ \\|== = ||=/^|^\\=||^\\ ||
-                    || == `||-----||' = ==|| | | |=|| |=||
-                    ||= == ||:^s^:|| = == ||=| | | || |=||
-                    || = = ||:___:||= == =|| |_|_| ||_|=||
-                    _||_ = =||o---.|| = ==_||_= == =||==_||_
-                    \\__/= = ||:   :||= == \\__/[][][][][]\\__/
-                    [||]= ==||:___:|| = = [||]\\//\\//\\[||]
-                    }  {---'"'-----'"'- --}  {//\\//\\//}  {
-                    __[==]__________________[==]\\//\\//\\[==]_
-                |`|~~~~|================|~~~~|~~~~~~~~|~~~~||
-                |^| ^  |================|^   | ^ ^^ ^ |  ^ ||
-                \\|//\\/^|/==============\\|/^\\\\^/^.\\^///\\//|///
-                \\///\\\\//===============\\//\\///\\\\////\\\\/////
-                """
+                                        .     .
+                                        !!!!!!!
+                                .       [[[|]]]    .
+                                !!!!!!!!|--_--|!!!!!
+                                [[[[[[[[\\_(X)_/]]]]]
+                        .-.     /-_--__-/_--_-\\-_--\\
+                        |=|    /-_---__/__-__-_\\__-_\\
+                    . . |=| ._/-__-__\\===========/-__\\_
+                    !!!!!!!!!\\========[ /]]|[[\\ ]=====/
+                    /-_--_-_-_[[[[[[[[[||==  == ||]]]]]]
+                    /-_--_--_--_|=  === ||=/^|^\\ ||== =|
+                    /-_-/^|^\\-_--| /^|^\\=|| | | | ||^\\= |
+                /_-_-| | |-_--|=| | | ||=|_|_|=||"|==|
+                /-__--|_|_|_-_-| |_|_|=||______=||_| =|
+                /_-__--_-__-___-|_=__=_.`---------'._=_|__
+                /-----------------------\\===========/-----/
+            ^^^\\^^^^^^^^^^^^^^^^^^^^^^[[|]]|[[|]]=====/
+                |.' ..==::'"'::==.. '.[ /~~~~~\\ ]]]]]]]
+                | .'=[[[|]]|[[|]]]=`._||==  =  || =\\ ]
+                ||== =|/ _____ \\|== = ||=/^|^\\=||^\\ ||
+                || == `||-----||' = ==|| | | |=|| |=||
+                ||= == ||:^s^:|| = == ||=| | | || |=||
+                || = = ||:___:||= == =|| |_|_| ||_|=||
+                _||_ = =||o---.|| = ==_||_= == =||==_||_
+                \\__/= = ||:   :||= == \\__/[][][][][]\\__/
+                [||]= ==||:___:|| = = [||]\\//\\//\\[||]
+                }  {---'"'-----'"'- --}  {//\\//\\//}  {
+                __[==]__________________[==]\\//\\//\\[==]_
+            |`|~~~~|================|~~~~|~~~~~~~~|~~~~||
+            |^| ^  |================|^   | ^ ^^ ^ |  ^ ||
+            \\|//\\/^|/==============\\|/^\\\\^/^.\\^///\\//|///
+            \\///\\\\//===============\\//\\///\\\\////\\\\/////
+            """
             print(haunted_house)
             sleep(3)
             clear()
@@ -281,48 +282,6 @@ def start_game(name):
             continue
 
 
-def investigate_room(room_name, room_item_descriptions):
-    """
-    Allows the player to investigate a room and its items.
-    """
-    clear()
-    t_print(f"You have entered the {room_name}\n")
-    room_description = room_item_descriptions[1]
-    items = room_item_descriptions[2:]
-
-    t_print(room_description + "\n")
-    t_print("What items would you like to investigate?\n")
-
-    for i in range(0, len(items), 2):
-        item_name = items[i]
-        t_print(f"{item_name} (Type '{item_name}')\n")
-        while True:
-            print("")
-            user_chosen_item = input(
-                "Type which item you would like to investigate or type 'B' to back out or type 'N' to access notebook: ")
-            print("")
-
-            for i in range(0, len(items), 2):
-                item_name = items[i]
-                if user_chosen_item.strip().title() == item_name:
-                    item_description = items[i + 1]
-                    t_print(item_description)
-                    break
-
-            if user_chosen_item.strip().title() == "N":
-                interact_with_notebook()
-                break
-            elif user_chosen_item.strip().title() == "B":
-                clear()
-                break
-            elif user_chosen_item == "":
-                print("Invalid choice. Please enter a response.")
-                continue
-            elif user_chosen_item.isdigit():
-                print("Invalid input. Please enter 'Y' or 'N', not a number.")
-                continue
-
-
 def enter_house():
     """
     Initiates the game by entering the haunted house.
@@ -341,6 +300,7 @@ def rooms():
     Displays a list of rooms for the player to investigate and provides options to access the notebook or quit the game.
     """
     clear()
+
     while True:
         print("Rooms to investigate:\n")
         room_worksheet = SHEET.worksheet('Rooms')
@@ -350,6 +310,7 @@ def rooms():
         print("")
         print("Access Notebook (Type 'N')\n")
         print("Quit Game (Type 'B')\n")
+
         print("Investigate a room, access your notebook or quit the game\n")
         user_room = input(
             "What action would you like to take?: ").strip().title()
@@ -376,6 +337,129 @@ def rooms():
             clear()
             print("Invalid room name. Please try again.\n")
             continue
+
+
+def investigate_room(room_name, room_item_descriptions):
+    """
+    Allows the player to investigate a room and its items.
+    """
+    clear()
+    t_print(f"You have entered the {room_name}\n")
+    room_description = room_item_descriptions[1]
+    items = room_item_descriptions[2:]
+
+    t_print(room_description + "\n")
+    t_print("What items would you like to investigate?\n")
+
+    for i in range(0, len(items), 2):
+        item_name = items[i]
+        t_print(f"{item_name} (Type '{item_name}')\n")
+
+    while True:
+        print("")
+        user_chosen_item = input(
+            "Type which item you would like to investigate or type 'B' to back out or type 'N' to access notebook: ")
+        print("")
+
+        for i in range(0, len(items), 2):
+            item_name = items[i]
+            if user_chosen_item.strip().title() == item_name:
+                item_description = items[i + 1]
+                t_print(item_description)
+                break
+
+        if user_chosen_item.strip().title() == "N":
+            interact_with_notebook()
+            break
+        elif user_chosen_item.strip().title() == "B":
+            clear()
+            break
+        elif user_chosen_item == "":
+            print("Invalid choice. Please enter a response.")
+            continue
+        elif user_chosen_item.isdigit():
+            print("Invalid input. Please enter 'Y' or 'N', not a number.")
+            continue
+
+
+def end_game(ghost, user_guess):
+    """
+    Ends the game and informs the player of the result when they run out of guesses.
+    """
+    clear()
+    sleep(2)
+    t_print("Oh no...")
+    t_print("Looks like you have run out of guesses!")
+    t_print(
+        f"The ghost you were dealing with was a {ghost}! Your final guess was a {user_guess}")
+    restart_game()
+
+
+def win_game(ghost):
+    """
+    Displays a victory message when the player correctly identifies the ghost.
+    """
+    win_text = """
+   _____                            _         _       _   _                 
+  / ____|                          | |       | |     | | (_)                
+ | |     ___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_ _  ___  _ __  ___ 
+ | |    / _ \\| '_ \\ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \\| '_ \\/ __|
+ | |___| (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \\__ \'
+  \\_____\\___/|_| |_|\\__, |_|  \\__,_|\\__|\\__,_|_|\\__,_|\\__|_|\\___/|_| |_|___/
+                     __/ |                                                  
+                    |___/                                                   
+
+"""
+    user_info_worksheet = SHEET.worksheet('Game Tracker')
+    name = user_info_worksheet.col_values(1)[1]
+    print(win_text)
+    sleep(2)
+
+    t_print(
+        f"Congradulations {name} you're clearly what you're made up to be! Now you got the hard work done we can now exorcise this {ghost} accordingly")
+    restart_game()
+
+
+def write_notes(notes_worksheet):
+    """
+    Allows the player to write notes in their notebook.
+    """
+    clear()
+    note = input("Write a note: ")
+    notes_worksheet.append_rows([[note]])
+    t_print(f"You wrote: '{note}'")
+
+
+def view_notes(notes_worksheet):
+    """
+    Retrieves and displays all notes from the player's notebook.
+    """
+    clear()
+    # Retrieve and display all notes from the Excel sheet
+    notes = notes_worksheet.col_values(1)[1:]  # Skip the header
+    if notes:
+        t_print("Your notes:")
+        for index, note in enumerate(notes, start=1):
+            t_print(f"{index}. {note}")
+    else:
+        t_print("You haven't written any notes yet.")
+
+
+def handle_guess(guess_left):
+    """
+    Handles the player's guess for the ghost and returns the user's choice.
+    """
+    clear()
+    t_print(f"Take your guess! You have {guess_left} guesses left!")
+    t_print("1. Banshee (Type 'Banshee')")
+    t_print("2. Jinn (Type 'Jinn')")
+    t_print("3. Wraith (Type 'Wraith')")
+    t_print("4. Shade (Type 'Shade')")
+    t_print("5. Demon (Type 'Demon')")
+    user_guess = input(
+        "Which ghost would you like to go for: ").strip().title()
+    t_print(f"You guessed: {user_guess}")
+    return user_guess
 
 
 def interact_with_notebook():
@@ -478,86 +562,6 @@ def interact_with_notebook():
         else:
             t_print(
                 "Invalid input. Please choose one of the available options (Write, View, B, Hints, Traits, Guess).")
-
-
-def end_game(ghost, user_guess):
-    """
-    Ends the game and informs the player of the result when they run out of guesses.
-    """
-    clear()
-    sleep(2)
-    t_print("Oh no...")
-    t_print("Looks like you have run out of guesses!")
-    t_print(
-        f"The ghost you were dealing with was a {ghost}! Your final guess was a {user_guess}")
-    restart_game()
-
-
-def win_game(ghost):
-    """
-    Displays a victory message when the player correctly identifies the ghost.
-    """
-    win_text = """
-   _____                            _         _       _   _                 
-  / ____|                          | |       | |     | | (_)                
- | |     ___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_ _  ___  _ __  ___ 
- | |    / _ \\| '_ \\ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \\| '_ \\/ __|
- | |___| (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \\__ \'
-  \\_____\\___/|_| |_|\\__, |_|  \\__,_|\\__|\\__,_|_|\\__,_|\\__|_|\\___/|_| |_|___/
-                     __/ |                                                  
-                    |___/                                                   
-
-"""
-    user_info_worksheet = SHEET.worksheet('Game Tracker')
-    name = user_info_worksheet.col_values(1)[1]
-    print(win_text)
-    sleep(2)
-
-    t_print(
-        f"Congradulations {name} you're clearly what you're made up to be! Now you got the hard work done we can now exorcise this {ghost} accordingly")
-    restart_game()
-
-
-def write_notes(notes_worksheet):
-    """
-    Allows the player to write notes in their notebook.
-    """
-    clear()
-    note = input("Write a note: ")
-    notes_worksheet.append_rows([[note]])
-    t_print(f"You wrote: '{note}'")
-
-
-def view_notes(notes_worksheet):
-    """
-    Retrieves and displays all notes from the player's notebook.
-    """
-    clear()
-    # Retrieve and display all notes from the Excel sheet
-    notes = notes_worksheet.col_values(1)[1:]  # Skip the header
-    if notes:
-        t_print("Your notes:")
-        for index, note in enumerate(notes, start=1):
-            t_print(f"{index}. {note}")
-    else:
-        t_print("You haven't written any notes yet.")
-
-
-def handle_guess(guess_left):
-    """
-    Handles the player's guess for the ghost and returns the user's choice.
-    """
-    clear()
-    t_print(f"Take your guess! You have {guess_left} guesses left!")
-    t_print("1. Banshee (Type 'Banshee')")
-    t_print("2. Jinn (Type 'Jinn')")
-    t_print("3. Wraith (Type 'Wraith')")
-    t_print("4. Shade (Type 'Shade')")
-    t_print("5. Demon (Type 'Demon')")
-    user_guess = input(
-        "Which ghost would you like to go for: ").strip().title()
-    t_print(f"You guessed: {user_guess}")
-    return user_guess
 
 
 def revert_original_sheet():
