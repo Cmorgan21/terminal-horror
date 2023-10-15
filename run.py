@@ -299,3 +299,12 @@ def rooms():
     Displays a list of rooms for the player to investigate and provides options to access the notebook or quit the game.
     """
     clear()
+    while True:
+        print("Rooms to investigate:\n")
+        room_worksheet = SHEET.worksheet('Rooms')
+        room_names = room_worksheet.col_values(1)[1:]
+        for room in room_names:
+            print(f"{room} (Type '{room}')\n")
+        print("")
+        print("Access Notebook (Type 'N')\n")
+        print("Quit Game (Type 'B')\n")
