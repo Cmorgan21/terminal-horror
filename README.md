@@ -212,3 +212,15 @@ User is supplied with a notenook which has a variety of uses throughout the game
 - I have also implemented spaces between certain sections of text such as rooms. This is to improve readbility
 
 - Following along this. Through each stage of the terminal clearing function. I have implemented a continue prompt so users get the time to read the content without feeling overwhelmed or rushed.
+
+## Testing and Validation
+
+### Pylint
+
+- I used pylint to ensure my python code was running at maximum efficeincy and any errors and bad handling could be sorted straight away, such as lines being too long and docstrings
+
+### Error Handling
+
+- I have tested all inputs to ensure all errors get handled gracefully such as. Numbers, Whitespaces, Incorrect characters and too mant characters and nothing being inputted.
+
+- All are provided with clear instructions that the user can't input these and are instructed again what they can input
