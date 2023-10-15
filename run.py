@@ -7,6 +7,8 @@ from time import sleep
 from google.oauth2.service_account import Credentials
 import gspread
 
+# Function to clear the terminal screen
+
 
 def clear():
     """
