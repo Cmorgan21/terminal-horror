@@ -19,3 +19,15 @@ Terminal Horror is a Python Terminal Horror Adventure game. This game is all abo
 9. [Technologies](#technologies)
 10. [Credits](#credits)
 11. [Acknowledgments](#acknowledgments)
+
+## Features
+
+### Introduction
+
+- The start of the programme gives you a brief introduction of what the game is and what your objective it.
+- It also gives you an introduction to a character you will be meeting within the game
+- The user will be asked if they are ready to play the game. If the user inputs a number, incorrect character or nothing. They will be redirected to the question with an explination of what they need to do
+
+- When sucessful the user will then be promted for their name
+
+- ![Introduction]()
