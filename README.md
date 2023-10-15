@@ -301,3 +301,11 @@ Instructions to deploy using Heroku:
 - Text to ASCII Art Generator: Used to generate the text art
 
 - Excalidraw: Used for creating mind maps and logic diagrams
+
+## Credits
+
+I used this website to create my ASCII Designs whcih create a more visual appreance for the terminal game.
+
+[ASCII Designs Website](https://patorjk.com/software/taag/#p=display&f=Big&t=Terminal%20Horror)
+
+## Acknowledgements
