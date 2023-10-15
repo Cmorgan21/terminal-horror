@@ -554,6 +554,10 @@ def handle_guess(guess_left):
     t_print("3. Wraith (Type 'Wraith')")
     t_print("4. Shade (Type 'Shade')")
     t_print("5. Demon (Type 'Demon')")
+    user_guess = input(
+        "Which ghost would you like to go for: ").strip().title()
+    t_print(f"You guessed: {user_guess}")
+    return user_guess
 
 
 def revert_original_sheet():
