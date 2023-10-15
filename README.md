@@ -118,3 +118,19 @@ User is supplied with a notenook which has a variety of uses throughout the game
 ### Restart the game
 
 - The user will be given the option to play the game again or exit the game completely after winning or losing the game. This will save the user from having to exit the website entirely
+
+## Design
+
+### The Strategy Plane
+
+- #### Purpose of the game
+
+  - The purpose of the game is for the user to play a fun, adventure and mystery packed horror game
+
+- #### Target Audience
+
+  - The target audience of the terminal horror game is for user's that enjoy problem solving, tense and mystery games or adventures.
+
+- #### Strategy of Game
+
+  - The strategy of the game is to challenge the user and their problem solving skills to crack which entity they are dealing with. Allow the user to think and read between the lines as they uncover the mystery within the horror house. Meanwhile dealing with an earrie ambiance as they play.
