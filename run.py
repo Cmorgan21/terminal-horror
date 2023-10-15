@@ -124,3 +124,11 @@ def introduction():
                 print(
                     "Invalid choice. Please enter 'Y' to start the adventure or 'N' to decline.")
             print("")
+
+
+def generate_ghost():
+    """
+    Generates Ghost at random using google sheets data and passing it as an argument
+    """
+    ghost_worksheet = SHEET.worksheet('Ghosts')
+    game_tracker_worksheet = SHEET.worksheet('Game Tracker')
