@@ -436,3 +436,13 @@ def interact_with_notebook():
         else:
             t_print(
                 "Invalid input. Please choose one of the available options (Write, View, B, Hints, Traits, Guess).")
+
+
+def revert_original_sheet():
+    """
+    Reverts the original worksheet data back to a backup in case the player ends the game.
+    """
+    original_worksheet = SHEET.worksheet("Rooms")
+    backup_worksheet = SHEET.worksheet("Rooms Copy")
+    note_worksheet = SHEET.worksheet("Notebook")
+    game_tracker_worksheet = SHEET.worksheet("Game Tracker")
