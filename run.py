@@ -446,3 +446,22 @@ def revert_original_sheet():
     backup_worksheet = SHEET.worksheet("Rooms Copy")
     note_worksheet = SHEET.worksheet("Notebook")
     game_tracker_worksheet = SHEET.worksheet("Game Tracker")
+
+    # Get the data from the backup worksheet
+    note_values = note_worksheet.get_all_values()
+    note_worksheet.clear()
+    if note_values:
+        first_row = note_values[0]  # Store the first row
+        note_worksheet.insert_rows([first_row])
+
+    game_values = game_tracker_worksheet.get_all_values()
+    game_tracker_worksheet.clear()
+    if game_values:
+        first_row = game_values[0]  # Store the first row
+        game_tracker_worksheet.insert_rows([first_row])
+
+    backup_data = backup_worksheet.get_all_values()
+
+    original_worksheet.clear()
+
+    original_worksheet.insert_rows(backup_data)
