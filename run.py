@@ -465,3 +465,9 @@ def revert_original_sheet():
     original_worksheet.clear()
 
     original_worksheet.insert_rows(backup_data)
+
+
+def restart_game():
+    """
+    Function executes when the game has finsihed to give the user option to play again
+    """
