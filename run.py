@@ -53,10 +53,12 @@ except ConnectionError as error:
     sys.exit(1)
 
 
+# Function to introduce the game
 def introduction():
     """
     Introduction for game with description of what the game is about
     """
+    # Open the 'Game Tracker' worksheet
     user_info_worksheet = SHEET.worksheet('Game Tracker')
     terminal_title = """
       _______                  _             _   _    _                           
