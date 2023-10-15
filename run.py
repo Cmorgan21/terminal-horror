@@ -370,7 +370,9 @@ def investigate_room(room_name, room_item_descriptions):
     """
     clear()
     t_print(f"You have entered the {room_name}\n")
+    # Get the room description from the room_item_descriptions list
     room_description = room_item_descriptions[1]
+    # Get a list of items in the room (ignoring the first element, which is the room description)
     items = room_item_descriptions[2:]
 
     t_print(room_description + "\n")
@@ -378,16 +380,19 @@ def investigate_room(room_name, room_item_descriptions):
 
     for i in range(0, len(items), 2):
         item_name = items[i]
+        # Display the item name and the command to investigate it
         t_print(f"{item_name} (Type '{item_name}')\n")
 
     while True:
         print("")
+        # Prompt the player for their choice (item to investigate, notebook, or back)
         user_chosen_item = input(
             "Type which item you would like to investigate or type 'B' to back out or type 'N' to access notebook: ")
         print("")
 
         for i in range(0, len(items), 2):
             item_name = items[i]
+            # Check if the player's choice matches the name of an item
             if user_chosen_item.strip().title() == item_name:
                 item_description = items[i + 1]
                 t_print(item_description)
