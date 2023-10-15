@@ -497,6 +497,18 @@ def win_game(ghost):
     """
     Displays a victory message when the player correctly identifies the ghost.
     """
+    win_text = """
+   _____                            _         _       _   _                 
+  / ____|                          | |       | |     | | (_)                
+ | |     ___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_ _  ___  _ __  ___ 
+ | |    / _ \\| '_ \\ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \\| '_ \\/ __|
+ | |___| (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \\__ \'
+  \\_____\\___/|_| |_|\\__, |_|  \\__,_|\\__|\\__,_|_|\\__,_|\\__|_|\\___/|_| |_|___/
+                     __/ |                                                  
+                    |___/                                                   
+
+"""
+    user_info_worksheet = SHEET.worksheet('Game Tracker')
 
 
 def revert_original_sheet():
