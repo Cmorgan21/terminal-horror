@@ -136,3 +136,10 @@ def generate_ghost():
     random_ghost = random.choice(ghost_names)
     generate_clues(random_ghost)
     game_tracker_worksheet.update_acell('B2', random_ghost)
+
+
+def generate_clues(ghost):
+    """
+    Generates clues for the ghost and updates Google Sheets with descriptions of items in cells for the generated ghost.
+    """
+    room_worksheet = SHEET.worksheet('Rooms')
