@@ -528,6 +528,12 @@ def write_notes(notes_worksheet):
     t_print(f"You wrote: '{note}'")
 
 
+def view_notes(notes_worksheet):
+    """
+    Retrieves and displays all notes from the player's notebook.
+    """
+
+
 def revert_original_sheet():
     """
     Reverts the original worksheet data back to a backup in case the player ends the game.
