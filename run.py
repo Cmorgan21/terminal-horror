@@ -308,3 +308,29 @@ def rooms():
         print("")
         print("Access Notebook (Type 'N')\n")
         print("Quit Game (Type 'B')\n")
+        print("Investigate a room, access your notebook or quit the game\n")
+        user_room = input(
+            "What action would you like to take?: ").strip().title()
+
+        if user_room == "B":
+            t_print("Exiting Game...")
+            revert_original_sheet()
+            clear()
+            restart_game()
+            break  # Exit the loop and end the program
+        elif user_room == "N":
+            clear()
+            interact_with_notebook()
+            continue
+        elif user_room in room_names:
+            room_index = room_names.index(user_room)
+            room_item_descriptions = room_worksheet.row_values(
+                2 + 1 * room_index)
+            investigate_room(user_room, room_item_descriptions)
+        elif user_room == "":
+            print("Invalid choice. Please enter a response.")
+            continue
+        else:
+            clear()
+            print("Invalid room name. Please try again.\n")
+            continue
