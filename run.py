@@ -343,6 +343,7 @@ def interact_with_notebook():
     clear()
     guess_left = 2  # Initialize guess_left here
     t_print("You take out your notebook")
+
     while True:
         notes_worksheet = SHEET.worksheet('Notebook')
         choice = input("What would you like to do?: ").strip().capitalize()
@@ -416,11 +417,22 @@ def interact_with_notebook():
                 for index, trait in enumerate(traits, start=1):
                     t_print(f"{index}. {trait}")
         elif choice == "Guess":
+            user_guess = handle_guess(guess_left)
 
             if user_guess != ghost:
+                t_print("Sorry, this isn't the ghost we're looking for")
+                guess_left -= 1
+                t_print(f"You have {guess_left} guesses left")
 
-
+                if guess_left == 0:
+                    revert_original_sheet()
+                    end_game(ghost, user_guess)
+                    break
             elif user_guess == ghost:
-
+                clear()
+                win_game(ghost)
+                revert_original_sheet()
+                break
         else:
-
+            t_print(
+                "Invalid input. Please choose one of the available options (Write, View, B, Hints, Traits, Guess).")
