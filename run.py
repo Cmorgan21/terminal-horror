@@ -153,10 +153,12 @@ def generate_ghost():
     game_tracker_worksheet.update_acell('B2', random_ghost)
 
 
+# Function to generate clues for a specific ghost and update Google Sheets
 def generate_clues(ghost):
     """
     Generates clues for the ghost and updates Google Sheets with descriptions of items in cells for the generated ghost.
     """
+    # Open the 'Rooms' worksheet
     room_worksheet = SHEET.worksheet('Rooms')
     cell_list = []
 
@@ -198,6 +200,7 @@ def generate_clues(ghost):
         ],
     }
 
+    # Loop through the ghost_clues dictionary to find the clues for the specified ghost
     if ghost in ghost_clues:
         cell_data = ghost_clues[ghost]
         for data in cell_data:
