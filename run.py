@@ -518,6 +518,12 @@ def win_game(ghost):
     restart_game()
 
 
+def write_notes(notes_worksheet):
+    """
+    Allows the player to write notes in their notebook.
+    """
+
+
 def revert_original_sheet():
     """
     Reverts the original worksheet data back to a backup in case the player ends the game.
