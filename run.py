@@ -182,3 +182,14 @@ def generate_clues(ghost):
                 "description": "As you approach the TV, you notice an unsettling presence, its lights flickering and beeping erratically. It's as though the spirits of the past are trying to communicate through this old, haunted television."}
         ],
     }
+    if ghost in ghost_clues:
+        cell_data = ghost_clues[ghost]
+        for data in cell_data:
+            cell = room_worksheet.cell(data["row"], data["column"])
+            cell.value = data["description"]
+            cell_list.append(cell)
+
+        # Update the worksheet to apply the changes
+        room_worksheet.update_cells(cell_list)
+    else:
+        print(f"No clues defined for the ghost: {ghost}")
