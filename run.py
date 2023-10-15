@@ -74,3 +74,51 @@ def introduction():
         "Teenagers have gone missing, and no one has ventured near the place for decades.")
     t_print("The mansion, a chilling enigma, beckons you to uncover its secrets.")
     sleep(3)
+
+    while True:
+        answer = input(
+            "Will you take on this paranormal phenomenon adventure?(Y/N): ").strip().upper()
+        print("")
+
+        if answer == "N":
+            t_print("Ah, it seems you aren't what we're looking for...")
+            t_print("Fear not. Not everyone is cut out for such an ominous task.")
+            t_print(
+                "But remember, the Terminal Horror Mansion's secrets will remain hidden...")
+            sleep(2)
+            break
+
+        elif answer == "Y":
+            t_print("Brave soul, you've accepted the challenge.")
+            t_print(
+                "Prepare yourself to confront the supernatural and uncover the truth.")
+            while True:
+                name = input("What is your name: ").strip()
+                if not name:
+                    print(
+                        "I'm sorry, but we need to know your name for the investigation.")
+                    continue
+                elif name.isdigit():
+                    print("Your name cannot be a number. Please enter a valid name.")
+                    continue
+                else:
+                    try:
+                        clear()
+                        start_game(name)
+                        break
+                    except ConnectionError as e:
+                        print(
+                            f"An error occurred while updating user info: {e}")
+                        break
+        elif answer == "":
+            print(
+                "Empty input. Please enter 'Y' to start the adventure or 'N' to decline.")
+            print("")
+        else:
+            if any(char.isdigit() for char in answer):
+                print(
+                    "Invalid choice. Please enter 'Y' to start the adventure or 'N' to decline.")
+            else:
+                print(
+                    "Invalid choice. Please enter 'Y' to start the adventure or 'N' to decline.")
+            print("")
