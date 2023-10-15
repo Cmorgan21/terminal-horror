@@ -224,3 +224,25 @@ User is supplied with a notenook which has a variety of uses throughout the game
 - I have tested all inputs to ensure all errors get handled gracefully such as. Numbers, Whitespaces, Incorrect characters and too mant characters and nothing being inputted.
 
 - All are provided with clear instructions that the user can't input these and are instructed again what they can input
+
+## SpreadSheet
+
+### Ghosts
+
+- The ghosts worksheet was used to display all ghost names and refernce all their ghost traits for eachother
+
+### Rooms
+
+- The rooms worksheet was used to displa all rooms, room descriptions, items and item descriptions for the game.
+
+### Rooms Copy
+
+- The rooms copy worksheet allows me to reset the original rooms sheet back to normal after the user has played the game. This is due to some of the descriptions changing depending on the ghost
+
+### Notebook
+
+- This worksheet allows all a users notes to be stored in a single column and will display them when the user decides to view them
+
+### Game Tracker
+
+- The game tracker sheet keeps track of the constants of the game - such as the users name and the entity that was generated - which can later be used for checking if the user guessed the correct entity
