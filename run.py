@@ -279,3 +279,11 @@ def start_game(name):
         else:
             print("Invalid input. Please enter 'Y' or 'N'.")
             continue
+
+
+def enter_house():
+    """
+    Initiates the game by entering the haunted house.
+    """
+    room_worksheet = SHEET.worksheet('Rooms')
+    hallway_description = room_worksheet.cell(5, 2).value
