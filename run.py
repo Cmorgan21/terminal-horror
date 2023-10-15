@@ -522,6 +522,10 @@ def write_notes(notes_worksheet):
     """
     Allows the player to write notes in their notebook.
     """
+    clear()
+    note = input("Write a note: ")
+    notes_worksheet.append_rows([[note]])
+    t_print(f"You wrote: '{note}'")
 
 
 def revert_original_sheet():
