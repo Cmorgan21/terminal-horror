@@ -87,3 +87,12 @@ User is supplied with a notenook which has a variety of uses throughout the game
   - Guessing the ghost section displays the list of ghosts that there are to to guess from. It will also explain that you only have two guesses.
 
   - When a user has made their guess. It will give the user feedback if it is right or wrong. If it is wrong the next time they go to guess. It will warn them they only have the one guess
+
+  - #### Writing Notes
+
+  - This allows the user to write notes of their own while they are playing the game to support them
+
+  - Once they have writted their notes this will be stored in an excel sheet ready to be previewed
+
+- #### Viewing Notes
+  - When a user views their notes they have made within the gaming session these notes will be fetched and displayed within the terminal from the sheets
