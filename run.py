@@ -356,3 +356,24 @@ def interact_with_notebook():
         print("4. Take a guess of what the entiity could be (Type 'Guess')")
         print("5. To get hints for what to look for (Type 'Hints')")
         print("6. Escape from this action (Type 'B')")
+
+        if choice == "Write":
+
+        elif choice == "View":
+
+        elif choice == "B":
+
+            break
+        elif choice == "Hints":
+
+        elif choice == "Traits":
+
+        elif choice == "Guess":
+
+            if user_guess != ghost:
+
+
+            elif user_guess == ghost:
+
+        else:
+
