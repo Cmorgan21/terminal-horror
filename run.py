@@ -5,11 +5,10 @@ from os import system
 
 from time import sleep
 from google.oauth2.service_account import Credentials
-import gspread
+import gspreadgit
+
 
 # Function to clear the terminal screen
-
-
 def clear():
     """
     Clears the terminal.
@@ -561,6 +560,7 @@ def interact_with_notebook():
             print("\n7. Fingerprints:")
             print(
                 "   - These could be in many forms, fingerprints, handmarks... claw marks?")
+
         elif choice == "Traits":
             clear()
             ghost_worksheet = SHEET.worksheet('Ghosts')
