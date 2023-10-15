@@ -272,3 +272,18 @@ Instructions to deploy using Heroku:
 6 - Click on deploy tab. Select deploy method, in this case Git Hub. Confirm connection to git hub by searching for the correct repository and then connecting to it.
 
 7 - To manually deploy project click 'Deploy Branch'. Once built a message will appear saying: Your app was successfully deployed. Click the view button to view the deployed page making a note of it's url.
+
+## Languages and Libraries
+
+### Python
+
+- #### Libraries:
+
+  - time
+  - sys
+  - random
+  - system from OS
+
+  - sleep from time
+  - Credentials from google.oauth2.service_account
+  - gspread
