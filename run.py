@@ -349,3 +349,10 @@ def interact_with_notebook():
         game_tracker_worksheet = SHEET.worksheet('Game Tracker')
         game_tracker_row = game_tracker_worksheet.row_values(2)
         ghost = game_tracker_row[1]
+
+        print("1. Write notes (Type 'Write')")
+        print("2. View notes (Type 'View')")
+        print("3. View ghost traits (Type 'Traits')")
+        print("4. Take a guess of what the entiity could be (Type 'Guess')")
+        print("5. To get hints for what to look for (Type 'Hints')")
+        print("6. Escape from this action (Type 'B')")
