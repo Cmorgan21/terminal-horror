@@ -343,3 +343,9 @@ def interact_with_notebook():
     clear()
     guess_left = 2  # Initialize guess_left here
     t_print("You take out your notebook")
+    while True:
+        notes_worksheet = SHEET.worksheet('Notebook')
+        choice = input("What would you like to do?: ").strip().capitalize()
+        game_tracker_worksheet = SHEET.worksheet('Game Tracker')
+        game_tracker_row = game_tracker_worksheet.row_values(2)
+        ghost = game_tracker_row[1]
