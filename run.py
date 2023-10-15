@@ -134,16 +134,22 @@ def introduction():
             print("")
 
 
+# Function to generate a random ghost
 def generate_ghost():
     """
     Generates Ghost at random using google sheets data and passing it as an argument
     """
+    # Open the 'Ghosts' worksheet
     ghost_worksheet = SHEET.worksheet('Ghosts')
     game_tracker_worksheet = SHEET.worksheet('Game Tracker')
 
+    # Get a list of ghost names
     ghost_names = ghost_worksheet.col_values(1)[1:]
+    # Choose a random ghost name
     random_ghost = random.choice(ghost_names)
+    # Generate clues for the chosen ghost
     generate_clues(random_ghost)
+    # Update the 'Game Tracker' worksheet with the selected ghost
     game_tracker_worksheet.update_acell('B2', random_ghost)
 
 
