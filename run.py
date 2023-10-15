@@ -532,6 +532,15 @@ def view_notes(notes_worksheet):
     """
     Retrieves and displays all notes from the player's notebook.
     """
+    clear()
+    # Retrieve and display all notes from the Excel sheet
+    notes = notes_worksheet.col_values(1)[1:]  # Skip the header
+    if notes:
+        t_print("Your notes:")
+        for index, note in enumerate(notes, start=1):
+            t_print(f"{index}. {note}")
+    else:
+        t_print("You haven't written any notes yet.")
 
 
 def revert_original_sheet():
