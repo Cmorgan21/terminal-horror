@@ -558,6 +558,9 @@ def interact_with_notebook():
             print("\n6. EMF Levels:")
             print("   - High levels of electromagnetic interference (EMF) are often associated with ghostly activity.")
             print("   - Electronic devices like TVs or lights may behave erratically, flicker, or malfunction when a ghost is nearby.")
+            print("\n7. Fingerprints:")
+            print(
+                "   - These could be in many forms, fingerprints, handmarks... claw marks?")
         elif choice == "Traits":
             clear()
             ghost_worksheet = SHEET.worksheet('Ghosts')
