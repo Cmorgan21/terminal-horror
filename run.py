@@ -484,6 +484,13 @@ def end_game(ghost, user_guess):
     """
     Ends the game and informs the player of the result when they run out of guesses.
     """
+    clear()
+    sleep(2)
+    t_print("Oh no...")
+    t_print("Looks like you have run out of guesses!")
+    t_print(
+        f"The ghost you were dealing with was a {ghost}! Your final guess was a {user_guess}")
+    restart_game()
 
 
 def win_game(ghost):
