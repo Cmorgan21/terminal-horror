@@ -246,3 +246,9 @@ User is supplied with a notenook which has a variety of uses throughout the game
 ### Game Tracker
 
 - The game tracker sheet keeps track of the constants of the game - such as the users name and the entity that was generated - which can later be used for checking if the user guessed the correct entity
+
+## Bugs and Fixes
+
+- One bug that I had while creating this project was User inputs not matching Rooms. When I would enter an input it wouldn't match with the if statemnet to enter the room. This was rectified by printing the users input to see what would come out and use the .strip and .title methods to match the Room names.
+
+- Another bug that I had issues with was viewing the notes and error handling. When the user goes to view notes and they aven't created any. I created a try and exception error handler that would print a message to inform users "You haven't created any notes", but this wouldn't work and would suggest "data is out of range". This was due to there being no data within the spreadsheet.
