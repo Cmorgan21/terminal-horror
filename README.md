@@ -287,3 +287,17 @@ Instructions to deploy using Heroku:
   - sleep from time
   - Credentials from google.oauth2.service_account
   - gspread
+
+## Tools and Technologies
+
+- VSCode: Used for writing and pushing the code to git hub
+
+- Git: Used for version control
+
+- Git hub: Used to store the repository for this project
+
+- Heroku: Used to deploy the website
+
+- Text to ASCII Art Generator: Used to generate the text art
+
+- Excalidraw: Used for creating mind maps and logic diagrams
