@@ -296,6 +296,31 @@ def investigate_room(room_name, room_item_descriptions):
     for i in range(0, len(items), 2):
         item_name = items[i]
         t_print(f"{item_name} (Type '{item_name}')\n")
+        while True:
+            print("")
+            user_chosen_item = input(
+                "Type which item you would like to investigate or type 'B' to back out or type 'N' to access notebook: ")
+            print("")
+
+            for i in range(0, len(items), 2):
+                item_name = items[i]
+                if user_chosen_item.strip().title() == item_name:
+                    item_description = items[i + 1]
+                    t_print(item_description)
+                    break
+
+            if user_chosen_item.strip().title() == "N":
+                interact_with_notebook()
+                break
+            elif user_chosen_item.strip().title() == "B":
+                clear()
+                break
+            elif user_chosen_item == "":
+                print("Invalid choice. Please enter a response.")
+                continue
+            elif user_chosen_item.isdigit():
+                print("Invalid input. Please enter 'Y' or 'N', not a number.")
+                continue
 
 
 def enter_house():
