@@ -252,3 +252,23 @@ User is supplied with a notenook which has a variety of uses throughout the game
 - One bug that I had while creating this project was User inputs not matching Rooms. When I would enter an input it wouldn't match with the if statemnet to enter the room. This was rectified by printing the users input to see what would come out and use the .strip and .title methods to match the Room names.
 
 - Another bug that I had issues with was viewing the notes and error handling. When the user goes to view notes and they aven't created any. I created a try and exception error handler that would print a message to inform users "You haven't created any notes", but this wouldn't work and would suggest "data is out of range". This was due to there being no data within the spreadsheet.
+
+## Deployment
+
+This website has been deployed using Heroku.
+
+Instructions to deploy using Heroku:
+
+1 - While in Heroku, navigate to dashboard and then click on the new button in the top right corner choosing: create new app.
+
+2 - Input a name for your app (this name will need to be unique) and choose the correct region for where you are located. Click create app.
+
+3 - Your app has been created, now click on the settings tab.
+
+4 - Click reveal config vars to add any keys the application will need. For this project I added the api credentials for my spreadsheet to a key of CREDS and a value of 8000 to a key of PORT.
+
+5 - Click add buildpack to install any interdependecies needed. For this project I installed 'python' and 'nodejs'.
+
+6 - Click on deploy tab. Select deploy method, in this case Git Hub. Confirm connection to git hub by searching for the correct repository and then connecting to it.
+
+7 - To manually deploy project click 'Deploy Branch'. Once built a message will appear saying: Your app was successfully deployed. Click the view button to view the deployed page making a note of it's url.
