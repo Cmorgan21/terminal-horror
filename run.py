@@ -484,3 +484,16 @@ def restart_game():
             break  # Exit the loop
         else:
             print("Invalid choice. Please enter 'Y' or 'N'.")
+
+
+def main():
+    """
+    The main function that initiates and controls the game's flow.
+    """
+    try:
+        introduction()
+    except ConnectionRefusedError as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+main()
