@@ -200,3 +200,15 @@ User is supplied with a notenook which has a variety of uses throughout the game
 - The user can backout of each section with a clear concise instruction of pressing 'B'
 
 - The user can also take out their notebook at any point of the game too using the instruction of 'N'
+
+### The Surface Plane
+
+- The Surface plane is a text-based terminal game
+
+- This also includes ASCII Designs to make the terminal game more appealing and to break up the text more
+
+- I have also implemented a type-writer like effect to allow users to follow along with the content, this helps with not allowing the user to feel so overwhelmed with text all in one print
+
+- I have also implemented spaces between certain sections of text such as rooms. This is to improve readbility
+
+- Following along this. Through each stage of the terminal clearing function. I have implemented a continue prompt so users get the time to read the content without feeling overwhelmed or rushed.
