@@ -75,3 +75,15 @@ User is supplied with a notenook which has a variety of uses throughout the game
   - The user can access hints to support them within the game. Specifically what to look for in terms of decriptions when they are checking the ghosts traits
 
   - This will give the user a better idea of what they are actual
+
+- #### Ghost Traits
+
+  - The ghost traits section gives a brief description of the entities that it could possibly be.
+
+  - It also gives 3 differnt traits that all of them carry. This is how the user will begin to decide which one it could be. By narrowing them down
+
+- #### Guessing the Ghost
+
+  - Guessing the ghost section displays the list of ghosts that there are to to guess from. It will also explain that you only have two guesses.
+
+  - When a user has made their guess. It will give the user feedback if it is right or wrong. If it is wrong the next time they go to guess. It will warn them they only have the one guess
