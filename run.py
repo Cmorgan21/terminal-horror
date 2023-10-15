@@ -51,6 +51,7 @@ def introduction():
     """
     Introduction for game with description of what the game is about
     """
+    user_info_worksheet = SHEET.worksheet('Game Tracker')
     terminal_title = """
       _______                  _             _   _    _                           
      |__   __|                (_)           | | | |  | |                          
@@ -103,6 +104,7 @@ def introduction():
                     continue
                 else:
                     try:
+                        user_info_worksheet.update_acell('A2', name)
                         clear()
                         start_game(name)
                         break
