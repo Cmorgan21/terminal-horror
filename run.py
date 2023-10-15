@@ -509,6 +509,13 @@ def win_game(ghost):
 
 """
     user_info_worksheet = SHEET.worksheet('Game Tracker')
+    name = user_info_worksheet.col_values(1)[1]
+    print(win_text)
+    sleep(2)
+
+    t_print(
+        f"Congradulations {name} you're clearly what you're made up to be! Now you got the hard work done we can now exorcise this {ghost} accordingly")
+    restart_game()
 
 
 def revert_original_sheet():
