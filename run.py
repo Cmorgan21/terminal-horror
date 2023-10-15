@@ -442,6 +442,7 @@ def win_game(ghost):
 """
     user_info_worksheet = SHEET.worksheet('Game Tracker')
     name = user_info_worksheet.col_values(1)[1]
+    # Grabs value from Game Tracker worksheet and stores the cell information
     print(win_text)
     sleep(2)
 
@@ -457,6 +458,7 @@ def write_notes(notes_worksheet):
     clear()
     note = input("Write a note: ")
     notes_worksheet.append_rows([[note]])
+    # Sends the data and stores it on the next row of the notebook worksheet
     t_print(f"You wrote: '{note}'")
 
 
