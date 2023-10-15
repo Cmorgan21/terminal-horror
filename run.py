@@ -214,6 +214,7 @@ def generate_clues(ghost):
         print(f"No clues defined for the ghost: {ghost}")
 
 
+# Starts the game with the users name and gives introduction of game
 def start_game(name):
     """
     Starts the game and provides the player with information and objectives.
@@ -242,6 +243,7 @@ def start_game(name):
     clear()
     sleep(2)
 
+    # checks user input and executes statements depnding on input
     while True:
         user_ready = input(f"So {name} are you ready?(Y/N): ")
         if user_ready.upper() == "Y":
@@ -288,13 +290,16 @@ def start_game(name):
         elif user_ready.upper() == "N":
             print("No problem. I will give you some time to think this through")
             continue
-        elif user_ready == "":
+        elif user_ready.strip() == "":
+            # Prevents user from inputting nothing
             print("Invalid choice. Please enter a response.")
             continue
         elif user_ready.isdigit():
+            # Prevents user from inputting number
             print("Invalid input. Please enter 'Y' or 'N', not a number.")
             continue
         else:
+            # If uer doesn;t input any of the above it will execute this code
             print("Invalid input. Please enter 'Y' or 'N'.")
             continue
 
