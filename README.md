@@ -96,3 +96,15 @@ User is supplied with a notenook which has a variety of uses throughout the game
 
 - #### Viewing Notes
   - When a user views their notes they have made within the gaming session these notes will be fetched and displayed within the terminal from the sheets
+
+### Item Options
+
+- When the user has chose a room to investigate they will be displayed with three items within each room.
+
+- The user will be given instructions of what to type to access the descriptions of the items.
+
+### Winning the game
+
+- When the user wins the game they will be prompted with a congradualtions and a small section of text
+
+- They will also be asked if they would like to play the game again or not and are given the option
