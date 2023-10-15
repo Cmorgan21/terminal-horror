@@ -292,3 +292,10 @@ def enter_house():
     t_print("You walk into the hallway\n")
     t_print(hallway_description + "\n")
     rooms()
+
+
+def rooms():
+    """
+    Displays a list of rooms for the player to investigate and provides options to access the notebook or quit the game.
+    """
+    clear()
