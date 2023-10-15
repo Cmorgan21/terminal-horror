@@ -287,3 +287,8 @@ def enter_house():
     """
     room_worksheet = SHEET.worksheet('Rooms')
     hallway_description = room_worksheet.cell(5, 2).value
+
+    t_print("You entered the house...\n")
+    t_print("You walk into the hallway\n")
+    t_print(hallway_description + "\n")
+    rooms()
