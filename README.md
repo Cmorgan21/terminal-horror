@@ -31,3 +31,11 @@ Terminal Horror is a Python Terminal Horror Adventure game. This game is all abo
 - When sucessful the user will then be promted for their name
 
 - ![Introduction]()
+
+### Game Introduction
+
+- The user will be given an introduction and a rundown to the story of what is going on and what their objective is.
+
+- A backstory will be given to support user experience. This is all done with a type writing affect to create ambience
+
+- The user will be prompted again if they are ready to take on the challenge - giving the user opportunity to engage with the game
