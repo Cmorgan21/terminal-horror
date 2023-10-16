@@ -368,9 +368,9 @@ def investigate_room(room_name, room_item_descriptions):
     items = room_item_descriptions[2:]
 
     t_print(room_description + "\n")
-    t_print("What items would you like to investigate?\n")
 
     while True:
+        clear()
         for i in range(0, len(items), 2):
             item_name = items[i]
             # Display the item name and the command to investigate it
@@ -490,6 +490,7 @@ def interact_with_notebook():
     Allows the player to interact with their notebook, write notes, view notes, check ghost traits, make guesses, or access hints.
     """
     guess_left = 2  # Initialize guess_left here
+    clear()
     t_print("You take out your notebook")
 
     while True:
@@ -497,7 +498,6 @@ def interact_with_notebook():
         game_tracker_worksheet = SHEET.worksheet('Game Tracker')
         game_tracker_row = game_tracker_worksheet.row_values(2)
         ghost = game_tracker_row[1]
-        clear()
 
         print("1. Write notes (Type 'Write')")
         print("2. View notes (Type 'View')")
@@ -563,15 +563,15 @@ def interact_with_notebook():
             # Get descriptions from column B, skip the header row
             ghost_descriptions = ghost_worksheet.col_values(2)[1:]
             for ghost_name, ghost_description in zip(ghost_names, ghost_descriptions):
-                t_print(ghost_name)
-                t_print(ghost_description)
-                t_print(f"Traits of {ghost_name}:")
+                print(ghost_name)
+                print(ghost_description)
+                print(f"Traits of {ghost_name}:")
                 # Adjust for 0-based index and header row
                 row_number = ghost_names.index(ghost_name) + 2
                 # Get traits from columns C, D, E
                 traits = ghost_worksheet.row_values(row_number)[2:5]
                 for index, trait in enumerate(traits, start=1):
-                    t_print(f"{index}. {trait}")
+                    print(f"{index}. {trait}")
             print("")
         elif choice == "Guess":
             user_guess = handle_guess(guess_left)
