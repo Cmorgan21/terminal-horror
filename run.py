@@ -608,8 +608,8 @@ def interact_with_notebook():
                 t_print(f"You have {guess_left} guesses left")
 
                 if guess_left == 0:
-                    revert_original_sheet()
                     end_game(ghost, user_guess)
+                    revert_original_sheet()
                     break
             elif user_guess == ghost:
                 clear()
