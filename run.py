@@ -251,7 +251,7 @@ def start_game(name):
     t_print("I've provided you with a notebook, a tool I've used on countless investigations.")
     t_print("In this book, you'll find.")
     print("")
-    t_print("Entities Traits. Check this first so you know what to expect.")
+    t_print("Entities Traits. Check this first so you know what to look for.")
     print("")
     t_print("Ability to write and view your own notes")
     print("")
@@ -609,11 +609,9 @@ def interact_with_notebook():
 
                 if guess_left == 0:
                     end_game(ghost, user_guess)
-                    revert_original_sheet()
                     break
             elif user_guess == ghost:
                 clear()
-                revert_original_sheet()
                 win_game(ghost)
                 break
         else:
@@ -652,6 +650,7 @@ def revert_original_sheet():
 
 
 def restart_game():
+    revert_original_sheet()
     while True:
         t_print("Thank you for playing Terminal Horror!")
         play_again = input("Play again? (Y/N): ").strip().upper()
