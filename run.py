@@ -61,28 +61,31 @@ def introduction():
     # Open the 'Game Tracker' worksheet
     user_info_worksheet = SHEET.worksheet('Game Tracker')
     terminal_title = """                   
-  _______ ______ _____  __  __ _____ _   _          _        _    _  ____  _____  _____   ____  _____   
- |__   __|  ____|  __ \|  \/  |_   _| \ | |   /\   | |      | |  | |/ __ \|  __ \|  __ \ / __ \|  __ \  
-    | |  | |__  | |__) | \  / | | | |  \| |  /  \  | |      | |__| | |  | | |__) | |__) | |  | | |__) | 
-    | |  |  __| |  _  /| |\/| | | | | . ` | / /\ \ | |      |  __  | |  | |  _  /|  _  /| |  | |  _  /  
-    | |  | |____| | \ \| |  | |_| |_| |\  |/ ____ \| |____  | |  | | |__| | | \ \| | \ \| |__| | | \ \  
-    |_|  |______|_|  \_\_|  |_|_____|_| \_/_/    \_\______| |_|  |_|\____/|_|  \_\_|  \_\\____/|_|  \_\                                                                         
+  _______                  _             _   _    _                           
+ |__   __|                (_)           | | | |  | |                          
+    | | ___ _ __ _ __ ___  _ _ __   __ _| | | |__| | ___  _ __ _ __ ___  _ __ 
+    | |/ _ | '__| '_ ` _ \| | '_ \ / _` | | |  __  |/ _ \| '__| '__/ _ \| '__|
+    | |  __| |  | | | | | | | | | | (_| | | | |  | | (_) | |  | | | (_) | |   
+    |_|\___|_|  |_| |_| |_|_|_| |_|\__,_|_| |_|  |_|\___/|_|  |_|  \___/|_|                                                                         
     """
 
     print(terminal_title)
+    print("By Callum Morgan")
+    clear()
     t_print("Welcome to the Terminal Horror")
     t_print("Prepare to step into a world shrouded in darkness, where secrets lie within every creaking floorboard and shadowed corner.")
-    sleep(2)
+    sleep(1)
+    print("")
 
     t_print("Before you stands Diablo, a seasoned paranormal investigator with an air of mystery and a haunted past.")
     t_print("He's sought the truth in countless haunted places, but none compare to the dread that lurks within the Terminal Horror Mansion.")
-    sleep(3)
+    sleep(1)
+    print("")
 
     t_print("Whispers of the mansion's malevolent reputation have reached your ears.")
-    t_print(
-        "Teenagers have gone missing, and no one has ventured near the place for decades.")
+    t_print("Teenagers have gone missing, and no one has ventured near the place for decades.")
     t_print("The mansion, a chilling enigma, beckons you to uncover its secrets.")
-    sleep(3)
+    sleep(1)
 
     while True:
         answer = input(
@@ -275,11 +278,6 @@ def start_game(name):
                 \\__/= = ||:   :||= == \\__/[][][][][]\\__/
                 [||]= ==||:___:|| = = [||]\\//\\//\\[||]
                 }  {---'"'-----'"'- --}  {//\\//\\//}  {
-                __[==]__________________[==]\\//\\//\\[==]_
-            |`|~~~~|================|~~~~|~~~~~~~~|~~~~||
-            |^| ^  |================|^   | ^ ^^ ^ |  ^ ||
-            \\|//\\/^|/==============\\|/^\\\\^/^.\\^///\\//|///
-            \\///\\\\//===============\\//\\///\\\\////\\\\/////
             """
             print(haunted_house)
             sleep(3)
@@ -508,15 +506,15 @@ def interact_with_notebook():
         game_tracker_row = game_tracker_worksheet.row_values(2)
         ghost = game_tracker_row[1]
 
-        choice = input("What would you like to do?: ").strip().capitalize()
-
         print("1. Write notes (Type 'Write')")
         print("2. View notes (Type 'View')")
         print("3. View ghost traits (Type 'Traits')")
         print("4. Take a guess of what the entiity could be (Type 'Guess')")
         print("5. To get hints for what to look for (Type 'Hints')")
         print("6. Escape from this action (Type 'B')")
-
+        
+        choice = input("What would you like to do?: ").strip().capitalize()
+        
         if choice == "Write":
             write_notes(notes_worksheet)
             continue
