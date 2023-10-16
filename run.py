@@ -320,6 +320,7 @@ def enter_house():
     t_print("You entered the house...\n")
     t_print("You walk into the hallway\n")
     t_print(hallway_description + "\n")
+    sleep(2)
     rooms()
 
 
@@ -596,6 +597,7 @@ def interact_with_notebook():
                 for index, trait in enumerate(traits, start=1):
                     print(f"{index}. {trait}")
             pause_and_continue()
+            clear()
             
             print("")
         elif choice == "Guess":
