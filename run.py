@@ -648,7 +648,6 @@ def main():
     The main function that initiates and controls the game's flow.
     """
     try:
-        rooms()
         introduction()
     except ConnectionRefusedError as e:
         # error handling is introduction couldn't be executed
