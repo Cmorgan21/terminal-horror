@@ -406,9 +406,7 @@ def investigate_room(room_name, room_item_descriptions):
         if user_chosen_item.strip().title().upper() == "N":
             interact_with_notebook()
             break
-        elif not item_found and user_chosen_item != "":
-            print("Invalid choice. Please enter a valid item name or 'N' to access the notebook, or 'B' to go back.")
-        elif user_chosen_item.upper() == "B":
+        elif user_chosen_item.strip().upper() == "B":
             clear()
             break
         elif user_chosen_item == "":
@@ -417,6 +415,8 @@ def investigate_room(room_name, room_item_descriptions):
         elif user_chosen_item.isdigit():
             print("Invalid input. Please enter a response not a number.")
             continue
+        elif not item_found and user_chosen_item != "":
+            print("Invalid choice. Please enter a valid item name or 'N' to access the notebook, or 'B' to go back.")
 
 
 
@@ -678,6 +678,7 @@ def main():
     The main function that initiates and controls the game's flow.
     """
     try:
+        rooms()
         introduction()
     except ConnectionRefusedError as e:
         # error handling is introduction couldn't be executed
