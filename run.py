@@ -392,14 +392,13 @@ def investigate_room(room_name, room_item_descriptions):
         # Prompt the player for their choice (item to investigate, notebook, or back)
         user_chosen_item = input(
             "Type which item you would like to investigate or type 'B' to back out or type 'N' to access notebook: ")
-        print("")
-
         for i in range(0, len(items), 2):
             item_name = items[i]
             # Check if the player's choice matches the name of an item
             if user_chosen_item.strip().title() == item_name:
                 item_description = items[i + 1]
                 t_print(item_description)
+                print("")
                 break
 
         if user_chosen_item.strip().title() == "N":
@@ -524,6 +523,8 @@ def interact_with_notebook():
         
         if choice == "Write":
             write_notes(notes_worksheet)
+            pause_and_continue()
+
             clear()
             continue
         elif choice == "View":
@@ -591,6 +592,8 @@ def interact_with_notebook():
                 traits = ghost_worksheet.row_values(row_number)[2:5]
                 for index, trait in enumerate(traits, start=1):
                     print(f"{index}. {trait}")
+            pause_and_continue()
+            
             print("")
         elif choice == "Guess":
             user_guess = handle_guess(guess_left)
@@ -610,6 +613,7 @@ def interact_with_notebook():
                 win_game(ghost)
                 break
         else:
+            clear()
             t_print(
                 "Invalid input. Please choose one of the available options (Write, View, B, Hints, Traits, Guess).")
 
