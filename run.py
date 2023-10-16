@@ -398,7 +398,9 @@ def investigate_room(room_name, room_item_descriptions):
                 t_print(item_description)
                 print("")
                 break
-
+            else:
+                print("Invalid input")
+                continue
         if user_chosen_item.strip().title() == "N":
             interact_with_notebook()
             break
