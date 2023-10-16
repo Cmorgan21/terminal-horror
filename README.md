@@ -106,7 +106,7 @@ User is supplied with a notenook which has a variety of uses throughout the game
 
 ![Wrong guess](./documentation/screenshots/wrong-guess.png)
 
-![Right Guess](./documentation/)
+![Right Guess](./documentation/screenshots/congradulations-text.png)
 
 - #### Writing Notes
 
