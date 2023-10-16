@@ -398,9 +398,6 @@ def investigate_room(room_name, room_item_descriptions):
                 t_print(item_description)
                 print("")
                 break
-            else:
-                print("Invalid input")
-                continue
         if user_chosen_item.strip().title() == "N":
             interact_with_notebook()
             break
@@ -412,6 +409,9 @@ def investigate_room(room_name, room_item_descriptions):
             continue
         elif user_chosen_item.isdigit():
             print("Invalid input. Please enter 'Y' or 'N', not a number.")
+            continue
+        else:
+            print("Invalid input")
             continue
 
 
@@ -648,9 +648,6 @@ def revert_original_sheet():
 
 
 def restart_game():
-    """
-    Function executes when the game has finsihed to give the user option to play again
-    """
     while True:
         t_print("Thank you for playing Terminal Horror!")
         play_again = input("Play again? (Y/N): ").strip().upper()
@@ -661,9 +658,13 @@ def restart_game():
             break  # Exit the loop to avoid repeating the question
         elif play_again == "N":
             t_print("No Problem. Goodbye!")
-            break  # Exit the loop
+            raise GameExitException("User decided to exit the game.")
+            # This will raise a custom exception
         else:
             print("Invalid choice. Please enter 'Y' or 'N'.")
+
+class GameExitException(Exception):
+    pass
 
 
 def main():
@@ -674,6 +675,12 @@ def main():
         introduction()
     except ConnectionRefusedError as e:
         # error handling is introduction couldn't be executed
+        print(f"An unexpected error occurred: {e}")
+    except GameExitException:
+        # Handle the custom exit exception
+        print("Exiting the game...")
+    except Exception as e:
+        # Handle other exceptions
         print(f"An unexpected error occurred: {e}")
 
 
