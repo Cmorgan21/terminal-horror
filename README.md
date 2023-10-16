@@ -10,15 +10,45 @@ Terminal Horror is a Python Terminal Horror Adventure game. This game is all abo
 
 1. [Introduction](#introduction)
 2. [Features](#features)
+   - [Introduction](#introduction)
+   - [Game Introduction](#game-introduction)
+   - [Haunted House ASCII](#haunted-house-ascii)
+   - [Entering the House](#entering-the-house)
+   - [Generated Ghost](#generated-ghost)
+   - [Room Options](#room-options)
+   - [Notebook](#notebook)
+     - [Hints](#hints)
+     - [Ghost Traits](#ghost-traits)
+     - [Guessing the Ghost](#guessing-the-ghost)
+     - [Writing Notes](#writing-notes)
+     - [Viewing Notes](#viewing-notes)
+   - [Item Options](#item-options)
+   - [Winning the Game](#winning-the-game)
+   - [Losing the Game](#losing-the-game)
+   - [Restart the Game](#restart-the-game)
 3. [Design](#design)
-4. [Development](#development)
-5. [Testing and Validation](#testing-and-validation)
+   - [The Strategy Plane](#the-strategy-plane)
+   - [The Scope Plane](#the-scope-plane)
+   - [Timing and Scalability](#timing-and-scalability)
+   - [The Structure Plane](#the-structure-plane)
+   - [The Surface Plane](#the-surface-plane)
+4. [Testing and Validation](#testing-and-validation)
+   - [Pylint](#pylint)
+   - [Error Handling](#error-handling)
+5. [Spreadsheet](#spreadsheet)
+   - [Ghosts](#ghosts)
+   - [Rooms](#rooms)
+   - [Rooms Copy](#rooms-copy)
+   - [Notebook](#notebook)
+   - [Game Tracker](#game-tracker)
 6. [Bugs and Fixes](#bugs-and-fixes)
 7. [Deployment](#deployment)
-8. [Local Setup](#local-setup)
-9. [Technologies](#technologies)
-10. [Credits](#credits)
-11. [Acknowledgments](#acknowledgments)
+8. [Technologies](#technologies)
+   - [Python](#python)
+     - [Libraries](#libraries)
+9. [Future Implementations](#future-implementations)
+10. [Tools and Technologies](#tools-and-technologies)
+11. [Credits](#credits)
 
 ## Features
 
@@ -364,6 +394,10 @@ Instructions to deploy using Heroku:
 ![Mind map](./documentation/screenshots/rooms-and-ghosts-mindmap.png)
 
 ![Mind map 2](./documentation/screenshots/sanity-bar-and-clues-mindmap.png)
+
+- draw.io: Logic Diagram
+
+![Simple Logic Graph](./documentation/screenshots/Simple-logic-graph.png)
 
 ## Credits
 
