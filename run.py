@@ -52,6 +52,18 @@ except ConnectionError as error:
     print(f"An error occurred while opening the spreadsheet: {error}")
     sys.exit(1)
 
+def pause_and_continue():
+    """
+    allows user to continnue the terminal when finished reading
+    """
+    print("\nPress 'c' to continue...")
+    while True:
+        user_input = input().strip().lower()
+        if user_input == "c":
+            break
+        else:
+            print("Invalid choice. Please enter c to continue")
+
 
 # Function to introduce the game
 def introduction():
@@ -368,9 +380,9 @@ def investigate_room(room_name, room_item_descriptions):
     items = room_item_descriptions[2:]
 
     t_print(room_description + "\n")
+    sleep(3)
 
     while True:
-        clear()
         for i in range(0, len(items), 2):
             item_name = items[i]
             # Display the item name and the command to investigate it
@@ -439,6 +451,7 @@ def win_game(ghost):
 
     t_print(
         f"Congradulations {name} you're clearly what you're made up to be! Now you got the hard work done we can now exorcise this {ghost} accordingly")
+    t_print("You Truly are the best ghost buster in town! :)")
     restart_game()
 
 
@@ -474,11 +487,11 @@ def handle_guess(guess_left):
     """
     clear()
     t_print(f"Take your guess! You have {guess_left} guesses left!")
-    t_print("1. Banshee (Type 'Banshee')")
-    t_print("2. Jinn (Type 'Jinn')")
-    t_print("3. Wraith (Type 'Wraith')")
-    t_print("4. Shade (Type 'Shade')")
-    t_print("5. Demon (Type 'Demon')")
+    print("1. Banshee (Type 'Banshee')")
+    print("2. Jinn (Type 'Jinn')")
+    print("3. Wraith (Type 'Wraith')")
+    print("4. Shade (Type 'Shade')")
+    print("5. Demon (Type 'Demon')")
     user_guess = input(
         "Which ghost would you like to go for: ").strip().title()
     t_print(f"You guessed: {user_guess}")
@@ -510,9 +523,11 @@ def interact_with_notebook():
         
         if choice == "Write":
             write_notes(notes_worksheet)
+            clear()
             continue
         elif choice == "View":
             view_notes(notes_worksheet)
+            clear()
             continue
         elif choice == "B":
             clear()
