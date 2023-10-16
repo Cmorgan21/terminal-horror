@@ -343,7 +343,9 @@ Instructions to deploy using Heroku:
 
 ## Future Implementatios
 
-- One feature I would love to add
+- One feature I would love to add is a ghost hunting feature. When the user is playing the ghost randomly hunts them and they have to quickly type hide. If they don't they lose. This would happen on random occasions
+
+- Another feature would be a sanity bar. After so much time the users sanity goes down. This would put pressure on the user and create a more tense game. Once it is too low the user loses
 
 ## Tools and Technologies
 
