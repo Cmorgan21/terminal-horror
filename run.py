@@ -398,6 +398,9 @@ def investigate_room(room_name, room_item_descriptions):
                 t_print(item_description)
                 print("")
                 break
+            else:
+                print("Invalid input")
+                continue
         if user_chosen_item.strip().title() == "N":
             interact_with_notebook()
             break
@@ -410,9 +413,7 @@ def investigate_room(room_name, room_item_descriptions):
         elif user_chosen_item.isdigit():
             print("Invalid input. Please enter 'Y' or 'N', not a number.")
             continue
-        else:
-            print("Invalid input")
-            continue
+
 
 
 def end_game(ghost, user_guess):
@@ -672,6 +673,7 @@ def main():
     The main function that initiates and controls the game's flow.
     """
     try:
+        rooms()
         introduction()
     except ConnectionRefusedError as e:
         # error handling is introduction couldn't be executed
