@@ -255,18 +255,7 @@ def start_game(name):
         user_ready = input(f"So {name} are you ready?(Y/N): ")
         if user_ready.upper() == "Y":
             haunted_house = """
-                                        .     .
-                                        !!!!!!!
-                                .       [[[|]]]    .
-                                !!!!!!!!|--_--|!!!!!
-                                [[[[[[[[\\_(X)_/]]]]]
-                        .-.     /-_--__-/_--_-\\-_--\\
-                        |=|    /-_---__/__-__-_\\__-_\\
-                    . . |=| ._/-__-__\\===========/-__\\_
-                    !!!!!!!!!\\========[ /]]|[[\\ ]=====/
-                    /-_--_-_-_[[[[[[[[[||==  == ||]]]]]]
-                    /-_--_--_--_|=  === ||=/^|^\\ ||== =|
-                    /-_-/^|^\\-_--| /^|^\\=|| | | | ||^\\= |
+
                 /_-_-| | |-_--|=| | | ||=|_|_|=||"|==|
                 /-__--|_|_|_-_-| |_|_|=||______=||_| =|
                 /_-__--_-__-___-|_=__=_.`---------'._=_|__
@@ -381,12 +370,11 @@ def investigate_room(room_name, room_item_descriptions):
     t_print(room_description + "\n")
     t_print("What items would you like to investigate?\n")
 
-    for i in range(0, len(items), 2):
-        item_name = items[i]
-        # Display the item name and the command to investigate it
-        t_print(f"{item_name} (Type '{item_name}')\n")
-
     while True:
+        for i in range(0, len(items), 2):
+            item_name = items[i]
+            # Display the item name and the command to investigate it
+            print(f"{item_name} (Type '{item_name}')\n")
         print("")
         # Prompt the player for their choice (item to investigate, notebook, or back)
         user_chosen_item = input(
@@ -501,7 +489,6 @@ def interact_with_notebook():
     """
     Allows the player to interact with their notebook, write notes, view notes, check ghost traits, make guesses, or access hints.
     """
-    clear()
     guess_left = 2  # Initialize guess_left here
     t_print("You take out your notebook")
 
@@ -510,6 +497,7 @@ def interact_with_notebook():
         game_tracker_worksheet = SHEET.worksheet('Game Tracker')
         game_tracker_row = game_tracker_worksheet.row_values(2)
         ghost = game_tracker_row[1]
+        clear()
 
         print("1. Write notes (Type 'Write')")
         print("2. View notes (Type 'View')")
@@ -564,6 +552,8 @@ def interact_with_notebook():
             print("\n7. Fingerprints:")
             print(
                 "   - These could be in many forms, fingerprints, handmarks... claw marks?")
+            print("")
+            continue
 
         elif choice == "Traits":
             clear()
@@ -582,6 +572,7 @@ def interact_with_notebook():
                 traits = ghost_worksheet.row_values(row_number)[2:5]
                 for index, trait in enumerate(traits, start=1):
                     t_print(f"{index}. {trait}")
+            print("")
         elif choice == "Guess":
             user_guess = handle_guess(guess_left)
 
@@ -657,6 +648,7 @@ def main():
     The main function that initiates and controls the game's flow.
     """
     try:
+        rooms()
         introduction()
     except ConnectionRefusedError as e:
         # error handling is introduction couldn't be executed
