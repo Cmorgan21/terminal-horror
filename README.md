@@ -72,11 +72,13 @@ Terminal Horror is a Python Terminal Horror Adventure game. This game is all abo
 
 - The user will be given a prompt on how to acess these rooms
 
-- ![Rooms Display]()
+![Rooms Display](./documentation/screenshots/room-options.png)
 
 ### NoteBook
 
 User is supplied with a notenook which has a variety of uses throughout the game
+
+![Notebook](./documentation/screenshots/notebook.png)
 
 - #### Hints
 
@@ -84,23 +86,33 @@ User is supplied with a notenook which has a variety of uses throughout the game
 
   - This will give the user a better idea of what they are actual
 
+![Hints](./documentation/screenshots/hints.png)
+
 - #### Ghost Traits
 
   - The ghost traits section gives a brief description of the entities that it could possibly be.
 
   - It also gives 3 differnt traits that all of them carry. This is how the user will begin to decide which one it could be. By narrowing them down
 
+![Traits](./documentation/screenshots/traits.png)
+
 - #### Guessing the Ghost
 
   - Guessing the ghost section displays the list of ghosts that there are to to guess from. It will also explain that you only have two guesses.
 
-  - When a user has made their guess. It will give the user feedback if it is right or wrong. If it is wrong the next time they go to guess. It will warn them they only have the one guess
+![Guessing ghost option](./documentation/screenshots/guess-ghost.png)
 
-  - #### Writing Notes
+- When a user has made their guess. It will give the user feedback if it is right or wrong. If it is wrong the next time they go to guess. It will warn them they only have the one guess
 
-  - This allows the user to write notes of their own while they are playing the game to support them
+![Wrong guess](./documentation/screenshots/wrong-guess.png)
 
-  - Once they have writted their notes this will be stored in an excel sheet ready to be previewed
+![Right Guess](./documentation/)
+
+- #### Writing Notes
+
+- This allows the user to write notes of their own while they are playing the game to support them
+
+- Once they have writted their notes this will be stored in an excel sheet ready to be previewed
 
 - #### Viewing Notes
   - When a user views their notes they have made within the gaming session these notes will be fetched and displayed within the terminal from the sheets
@@ -111,11 +123,19 @@ User is supplied with a notenook which has a variety of uses throughout the game
 
 - The user will be given instructions of what to type to access the descriptions of the items.
 
+![item options](./documentation/screenshots/room-item-option.png)
+
+![item descriptions](./documentation/screenshots/item-descriptions.png)
+
 ### Winning the game
 
 - When the user wins the game they will be prompted with a congradualtions and a small section of text
 
 - They will also be asked if they would like to play the game again or not and are given the option
+
+![Congradulations ASCII](./documentation/screenshots/congradulations.png)
+
+![Congradulations text](./documentation/screenshots/congradulations-text.png)
 
 ### Losing the games
 
@@ -123,9 +143,13 @@ User is supplied with a notenook which has a variety of uses throughout the game
 
 - The user will be asked if they would like to play again or not too!
 
+![Losing the game](./documentation/screenshots/lose-game.png)
+
 ### Restart the game
 
 - The user will be given the option to play the game again or exit the game completely after winning or losing the game. This will save the user from having to exit the website entirely
+
+![option to play again](./documentation/screenshots/lose-game.png)
 
 ## Design
 
@@ -225,7 +249,9 @@ User is supplied with a notenook which has a variety of uses throughout the game
 
 ### Pylint
 
-- I used pylint to ensure my python code was running at maximum efficeincy and any errors and bad handling could be sorted straight away, such as lines being too long and docstrings
+- I used pylint to ensure my python code was running at maximum efficeincy and any errors and bad handling could be sorted straight away, such as lines being too long and docstrings.
+
+- The only error returned was a few lines being too long, but couldnt be changed due to descriptions. Couldn't chnage this as it would cluster up code
 
 ### Error Handling
 

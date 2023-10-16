@@ -244,7 +244,7 @@ def start_game(name):
     print("")
     t_print("This is where you come in.")
     t_print("Your mission is to uncover the truth behind the haunting and bring closure to those lost souls.")
-    t_print("Using the descriptions of items within rooms, discover if any of these descriptions hint towards traits of an entity")
+    t_print("Use the descriptions of items within rooms to uncover the traits of the ghost. Only a few items reveal these traits")
     pause_and_continue()
     sleep(2)
     clear()
@@ -392,6 +392,7 @@ def investigate_room(room_name, room_item_descriptions):
         # Prompt the player for their choice (item to investigate, notebook, or back)
         item_found = False 
         user_chosen_item = input("Type which item you would like to investigate or type 'B' to back out or type 'N' to access notebook: ")
+        print("")
         for i in range(0, len(items), 2):
             item_name = items[i]
             # Check if the player's choice matches the name of an item
@@ -407,14 +408,14 @@ def investigate_room(room_name, room_item_descriptions):
             break
         elif not item_found and user_chosen_item != "":
             print("Invalid choice. Please enter a valid item name or 'N' to access the notebook, or 'B' to go back.")
-        elif user_chosen_item.strip().title().upper() == "B":
+        elif user_chosen_item.strip().upper() == "B":
             clear()
             break
         elif user_chosen_item == "":
             print("Invalid choice. Please enter a response.")
             continue
         elif user_chosen_item.isdigit():
-            print("Invalid input. Please enter 'Y' or 'N', not a number.")
+            print("Invalid input. Please enter a response not a number.")
             continue
 
 
