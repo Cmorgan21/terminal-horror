@@ -243,7 +243,7 @@ def start_game(name):
     t_print("What's worse... Since it gained notoriety, we've had a group of teenagers disappear after venturing inside.")
     print("")
     t_print("This is where you come in.")
-    t_print("Your mission is to uncover the truth behind the haunting and bring closure to those lost souls.")
+    t_print("Your mission is to uncover the nature of the ghost")
     t_print("Use the descriptions of items within rooms to uncover the traits of the ghost. Only a few items reveal these traits")
     pause_and_continue()
     sleep(2)
