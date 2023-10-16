@@ -4,11 +4,12 @@ import random
 from os import system
 
 from time import sleep
+import gspread
 from google.oauth2.service_account import Credentials
-import gspreadgit
-
 
 # Function to clear the terminal screen
+
+
 def clear():
     """
     Clears the terminal.
