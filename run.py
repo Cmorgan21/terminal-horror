@@ -389,6 +389,7 @@ def investigate_room(room_name, room_item_descriptions):
 
     while True:
         # Prompt the player for their choice (item to investigate, notebook, or back)
+        item_found = False 
         user_chosen_item = input("Type which item you would like to investigate or type 'B' to back out or type 'N' to access notebook: ")
         for i in range(0, len(items), 2):
             item_name = items[i]
@@ -397,14 +398,15 @@ def investigate_room(room_name, room_item_descriptions):
                 item_description = items[i + 1]
                 t_print(item_description)
                 print("")
+                item_found = True
                 break
-            else:
-                print("Invalid input")
-                continue
-        if user_chosen_item.strip().title() == "N":
+        
+        if user_chosen_item.strip().title().upper() == "N":
             interact_with_notebook()
             break
-        elif user_chosen_item.strip().title() == "B":
+        elif not item_found and user_chosen_item != "":
+            print("Invalid choice. Please enter a valid item name or 'N' to access the notebook, or 'B' to go back.")
+        elif user_chosen_item.strip().title().upper() == "B":
             clear()
             break
         elif user_chosen_item == "":
@@ -600,6 +602,7 @@ def interact_with_notebook():
             user_guess = handle_guess(guess_left)
 
             if user_guess != ghost:
+                clear()
                 t_print("Sorry, this isn't the ghost we're looking for")
                 guess_left -= 1
                 t_print(f"You have {guess_left} guesses left")
@@ -673,7 +676,6 @@ def main():
     The main function that initiates and controls the game's flow.
     """
     try:
-        rooms()
         introduction()
     except ConnectionRefusedError as e:
         # error handling is introduction couldn't be executed
