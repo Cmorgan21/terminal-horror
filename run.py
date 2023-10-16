@@ -245,6 +245,7 @@ def start_game(name):
     t_print("This is where you come in.")
     t_print("Your mission is to uncover the truth behind the haunting and bring closure to those lost souls.")
     t_print("Using the descriptions of items within rooms, discover if any of these descriptions hint towards traits of an entity")
+    pause_and_continue()
     sleep(2)
     clear()
     t_print("I've provided you with a notebook, a tool I've used on countless investigations.")
@@ -258,7 +259,7 @@ def start_game(name):
     print("")
     t_print("Remember, when you're sure of the entity you're dealing with, make your guess in the notebook's 'Guess' section.")
     t_print("But you have only two chances, so choose wisely.")
-    sleep(2)
+    pause_and_continue()
     clear()
     sleep(2)
 
@@ -527,6 +528,7 @@ def interact_with_notebook():
             continue
         elif choice == "View":
             view_notes(notes_worksheet)
+            pause_and_continue()
             clear()
             continue
         elif choice == "B":
@@ -568,6 +570,8 @@ def interact_with_notebook():
             print(
                 "   - These could be in many forms, fingerprints, handmarks... claw marks?")
             print("")
+            pause_and_continue()
+            clear()
             continue
 
         elif choice == "Traits":
