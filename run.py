@@ -408,7 +408,7 @@ def investigate_room(room_name, room_item_descriptions):
             break
         elif not item_found and user_chosen_item != "":
             print("Invalid choice. Please enter a valid item name or 'N' to access the notebook, or 'B' to go back.")
-        elif user_chosen_item.strip().upper() == "B":
+        elif user_chosen_item.upper() == "B":
             clear()
             break
         elif user_chosen_item == "":
