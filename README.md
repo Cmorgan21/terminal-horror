@@ -4,7 +4,7 @@ Terminal Horror is a Python Terminal Horror Adventure game. This game is all abo
 
 **Author:** Callum Morgan
 
-**Game Link:** [Play Terminal Horror]()
+**Game Link:** [Play Terminal Horror](https://terminal-horror-8b6bbf24f4d4.herokuapp.com)
 
 ## Table of Contents
 
@@ -28,9 +28,13 @@ Terminal Horror is a Python Terminal Horror Adventure game. This game is all abo
 - It also gives you an introduction to a character you will be meeting within the game
 - The user will be asked if they are ready to play the game. If the user inputs a number, incorrect character or nothing. They will be redirected to the question with an explination of what they need to do
 
+![Game Introduction](./documentation/screenshots/Introduction-game-name.png)
+
+![Game Introduction 2](./documentation/screenshots/game-introduction-2.png)
+
 - When sucessful the user will then be promted for their name
 
-- ![Introduction]()
+![Name Prompt](./documentation/screenshots/introduction-name-prompt.png)
 
 ### Game Introduction
 
@@ -40,9 +44,13 @@ Terminal Horror is a Python Terminal Horror Adventure game. This game is all abo
 
 - The user will be prompted again if they are ready to take on the challenge - giving the user opportunity to engage with the game
 
+![In game introduction](./documentation/screenshots/in-game-introduction.png)
+
+![In game introduction 2](./documentation/screenshots/in-game-introduction-2.png)
+
 ### Haunted House ASCII
 
--[Haunted House ASCII]()
+![Haunted House ASCII](./documentation/screenshots/house-ASCII.png)
 
 - The user will be displayed with a visual house created from ASCII to help with the user experince
 
