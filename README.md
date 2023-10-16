@@ -259,11 +259,14 @@ User is supplied with a notenook which has a variety of uses throughout the game
 
 - All are provided with clear instructions that the user can't input these and are instructed again what they can input
 
-![Number Error Handling]()
+- Number Error Handling
+  ![Number Error Handling](./documentation/screenshots/number-error-handler.png)
 
-![No input Error Handling]()
+- No Input Error Handlings
+  ![No input Error Handling](./documentation/screenshots/no-input-error-handler.png)
 
-![Wrong text Error Handling]()
+- Wrong text Error Handling
+  ![Wrong text Error Handling](./documentation/screenshots/wrong-input-error-handler.png)
 
 ## SpreadSheet
 
@@ -338,6 +341,10 @@ Instructions to deploy using Heroku:
   - Credentials from google.oauth2.service_account
   - gspread
 
+## Future Implementatios
+
+- One feature I would love to add
+
 ## Tools and Technologies
 
 - VSCode: Used for writing and pushing the code to git hub
@@ -352,10 +359,15 @@ Instructions to deploy using Heroku:
 
 - Excalidraw: Used for creating mind maps and logic diagrams
 
+![Mind map](./documentation/screenshots/rooms-and-ghosts-mindmap.png)
+
+![Mind map 2](./documentation/screenshots/sanity-bar-and-clues-mindmap.png)
+
 ## Credits
 
-I used this website to create my ASCII Designs whcih create a more visual appreance for the terminal game.
+- I used this website to create my ASCII Designs whcih create a more visual appreance for the terminal game.
+  [ASCII Designs Website](https://patorjk.com/software/taag/#p=display&f=Big&t=Terminal%20Horror)
 
-[ASCII Designs Website](https://patorjk.com/software/taag/#p=display&f=Big&t=Terminal%20Horror)
+- The use of sleep() and clear() function for the tunnel was taken from the inspiration of [detective-game-p3 project](https://github.com/GeorginaCarlisle/detective-game-p3) Go check it out
 
-## Acknowledgements
+- Code Institute has taught me all foundation knowledgde of Python with the Python Essentials Module
