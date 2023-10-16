@@ -284,6 +284,7 @@ def start_game(name):
                 }  {---'"'-----'"'- --}  {//\\//\\//}  {
             """
             print(haunted_house)
+            t_print("You walk towards to the building...")
             sleep(3)
             clear()
             generate_ghost()
@@ -595,8 +596,8 @@ def interact_with_notebook():
                     break
             elif user_guess == ghost:
                 clear()
-                win_game(ghost)
                 revert_original_sheet()
+                win_game(ghost)
                 break
         else:
             t_print(
